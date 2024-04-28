@@ -1,20 +1,30 @@
 class LoginPage {
-  enterURL() {
-    cy.visit(
-      "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
-    );
+  goToLoginWithURL() {
+    cy.visit("https://staging.komunitasmea.com/login");
   }
-  enterUserNamePassword(username, password) {
-    cy.get('[id="input-email"]').type(username);
-    cy.get('[id="input-password"]').type(password);
-    return this;
+
+  verifyUserOnLoginPage() {
+    cy.url().should("eq", "https://staging.komunitasmea.com/login");
   }
-  clickSubmitButton() {
-    cy.get('[type="submit"]').eq(0).click();
-    return this;
+
+  inputEmail(email) {
+    cy.get("[data-testid='login-field-email']").type(email);
   }
-  verifyPageTitle() {
-    return cy.title().should("eq", "Search -");
+
+  inputPassword(password) {
+    cy.get("[data-testid='login-password']").type(password);
+  }
+
+  clickMasukBtn() {
+    cy.get("[data-testid='login-btn-login']").click();
+  }
+
+  wrongEmailPasswordShowed() {
+    cy.get("[data-testid='messagebox-error']").should('be.visible');
+  }
+
+  wrongEmailFormatShowed() {
+    cy.get("[data-testid='login-error-message-email']").should('be.visible');
   }
 }
 const login = new LoginPage();

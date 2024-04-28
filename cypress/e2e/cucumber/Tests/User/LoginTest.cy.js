@@ -1,18 +1,44 @@
 /// <reference types="cypress" />
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import login from "../../Pages/User/LoginPage.cy";
-Given("I navigate to the Website", () => {
-  login.enterURL();
+import home from "../../Pages/User/Homepage.cy";
+When("User go to Login Page via url", () => {
+  login.goToLoginWithURL();
 });
-When("I entered valid credential", (datatable) => {
-  datatable.hashes().forEach((element) => {
-    login.enterUserNamePassword(element.email, element.validpassword);
-    login.clickSubmitButton();
-  });
+
+Then("User is navigated to Login Page", () => {
+  login.verifyUserOnLoginPage();
 });
-And("User click on sign in button", () => {
-  login.clickSubmitButton();
+
+Given("User is on login page", () => {
+  login.goToLoginWithURL();
+  login.verifyUserOnLoginPage();
 });
-Then("Validate the title after login", () => {
-  login.verifyPageTitle();
+
+When("User login by entering email field with value {string}", (email) => {
+  login.inputEmail(email);
+});
+
+And("User login by entering password field with value {string}", (password) => {
+  login.inputPassword(password);
+});
+
+Then("User submitted all input field", () => {
+  login.clickMasukBtn();
+});
+
+And("User is navigated to home page", () => {
+  home.verifyUserOnHomePage();
+});
+
+But("User cannot be logged in", () => {
+  home.verifyUserOnHomePage();
+});
+
+And("Error wrong email or password message showed", () => {
+  login.wrongEmailPasswordShowed();
+});
+
+And("Error email format message showed", () => {
+  login.wrongEmailFormatShowed();
 });
