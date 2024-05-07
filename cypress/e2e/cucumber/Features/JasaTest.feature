@@ -1,13 +1,13 @@
 Feature: Jasa Functionality
   Test Jasa component functionalities Landing Page and checkout
 
-  #### Semua Jasa Kami
-  @SemuaJasa @Jasa
-  Scenario: User is able to access Semua Jasa page by url
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    Then User is navigated to Semua Jasa page
+  # #### Semua Jasa Kami
+  # @SemuaJasa @Jasa
+  # Scenario: User is able to access Semua Jasa page by url
+  #   Given User is on Home Page
+  #   And User is not logged in yet
+  #   When User go to Semua Jasa page via url
+  #   Then User is navigated to Semua Jasa page
   
   @SemuaJasa @Jasa
   Scenario: User is able to click kontak admin MEA

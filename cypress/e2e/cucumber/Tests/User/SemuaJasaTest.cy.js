@@ -9,3 +9,11 @@ When("User go to Semua Jasa page via url" ,() => {
 Then("User is navigated to Semua Jasa page", () => {
     semuaJasa.verifyUserInSemuaJasaPage();
 });
+
+And("User click Kontak admin mea", () => {
+    semuaJasa.clickKontakAdminMeaBtn();
+});
+
+Then("User is navigated to whatsapp jasa mea", () => {
+    semuaJasa.verifyWhatsappJasaOpenedOnNewTab();
+});
