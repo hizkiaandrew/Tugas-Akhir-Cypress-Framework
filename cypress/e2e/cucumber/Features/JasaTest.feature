@@ -9,13 +9,13 @@ Feature: Jasa Functionality
     When User go to Semua Jasa page via url
     Then User is navigated to Semua Jasa page
   
-#   @SemuaJasa @Jasa
-#   Scenario: User is able to click kontak admin MEA
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Kontak admin mea
-#     Then User is navigated to whatsapp jasa mea
+  @SemuaJasa @Jasa
+  Scenario: User is able to click kontak admin MEA
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Kontak admin mea
+    Then User is navigated to whatsapp jasa mea
   
 #   @PilihanJasaMarketplace @SemuaJasa @Jasa
 #   Scenario: User is able to click marketplace management button

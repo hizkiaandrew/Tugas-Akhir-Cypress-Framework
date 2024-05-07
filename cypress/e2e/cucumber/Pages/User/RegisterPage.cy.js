@@ -1,3 +1,4 @@
+import { LOGIN_URL } from "../../Utils/variable";
 class RegisterPage {
   generateEmail(length) {
     let characters =
@@ -20,11 +21,11 @@ class RegisterPage {
   }
 
   goToLoginWithURL() {
-    cy.visit("https://staging.komunitasmea.com/login");
+    cy.visit(LOGIN_URL);
   }
 
   verifyUserOnLoginPage() {
-    cy.url().should("include", "https://staging.komunitasmea.com/login");
+    cy.url().should("include", LOGIN_URL);
   }
 
   inputUserName(username) {

@@ -1,10 +1,11 @@
+import { LOGIN_URL } from "../../Utils/variable";
 class LoginPage {
   goToLoginWithURL() {
-    cy.visit("https://staging.komunitasmea.com/login");
+    cy.visit(LOGIN_URL);
   }
 
   verifyUserOnLoginPage() {
-    cy.url().should("eq", "https://staging.komunitasmea.com/login");
+    cy.url().should("eq", LOGIN_URL);
   }
 
   inputEmail(email) {

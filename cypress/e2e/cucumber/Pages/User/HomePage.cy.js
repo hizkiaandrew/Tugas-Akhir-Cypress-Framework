@@ -1,10 +1,11 @@
+import { HOME_URL } from "../../Utils/variable";
 class HomePage {
   goToHomePageByUrl() {
-    cy.visit("https://staging.komunitasmea.com/");
+    cy.visit(HOME_URL);
   }
 
   verifyUserOnHomePage() {
-    cy.url().should("include", "https://staging.komunitasmea.com/");
+    cy.url().should("include", HOME_URL);
   }
 
   verifyUserStagingCookieID() {
