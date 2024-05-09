@@ -1,13 +1,13 @@
 Feature: Jasa Functionality
   Test Jasa component functionalities Landing Page and checkout
 
-  # #### Semua Jasa Kami
-  # @SemuaJasa @Jasa
-  # Scenario: User is able to access Semua Jasa page by url
-  #   Given User is on Home Page
-  #   And User is not logged in yet
-  #   When User go to Semua Jasa page via url
-  #   Then User is navigated to Semua Jasa page
+  #### Semua Jasa Kami
+  @SemuaJasa @Jasa
+  Scenario: User is able to access Semua Jasa page by url
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    Then User is navigated to Semua Jasa page
   
   @SemuaJasa @Jasa
   Scenario: User is able to click kontak admin MEA
@@ -17,13 +17,13 @@ Feature: Jasa Functionality
     And User click Kontak admin mea
     Then User is navigated to whatsapp jasa mea
   
-#   @PilihanJasaMarketplace @SemuaJasa @Jasa
-#   Scenario: User is able to click marketplace management button
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Marketplace Management
-#     Then User is navigated to Marketplace Management page
+  @PilihanJasaMarketplace @SemuaJasa @Jasa
+  Scenario: User is able to click marketplace management button
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Marketplace Management
+    Then User is navigated to Marketplace Management page
   
 #   @PilihanJasaSosmed @SemuaJasa @Jasa
 #   Scenario: User is able to click social media management

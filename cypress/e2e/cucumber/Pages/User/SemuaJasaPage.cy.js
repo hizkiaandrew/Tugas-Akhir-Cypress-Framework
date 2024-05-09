@@ -18,13 +18,25 @@ class SemuaJasaPage {
           // but pass the `_self` argument
           return win.open.wrappedMethod.call(win, url, "_self");
         })
-      .as("open");
+        .as("open");
     });
     cy.get("[data-testid='btn-contact-admin-agencypricelist']").click();
   }
 
   verifyWhatsappJasaOpenedOnNewTab() {
     cy.url().should("include", "whatsapp");
+  }
+
+  clickMarketplaceManagementBtn() {
+    cy.scrollTo(0, 5000);
+    cy.wait(1000);
+    // cy.wait(
+    //   "div[data-testid='agencypricelist-marketplace-management'] a[data-testid='btn-agencypricelist-link-marketplace']"
+    // ).should('be.visible');
+    cy.get(
+      "div[data-testid='agencypricelist-marketplace-management'] a[data-testid='btn-agencypricelist-link-marketplace']"
+    ).click();
+
   }
 }
 

@@ -17,3 +17,11 @@ And("User click Kontak admin mea", () => {
 Then("User is navigated to whatsapp jasa mea", () => {
     semuaJasa.verifyWhatsappJasaOpenedOnNewTab();
 });
+
+When("User click Marketplace Management", () => {
+    semuaJasa.clickMarketplaceManagementBtn();
+});
+
+Then("User is navigated to Marketplace Management page", () => {
+    
+});
