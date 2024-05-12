@@ -25,53 +25,53 @@ Feature: Jasa Functionality
     And User click Marketplace Management
     Then User is navigated to Marketplace Management page
   
-#   @PilihanJasaSosmed @SemuaJasa @Jasa
-#   Scenario: User is able to click social media management
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Social Media Management
-#     Then User is navigated to Social Media Management page
+  @PilihanJasaSosmed @SemuaJasa @Jasa
+  Scenario: User is able to click social media management button
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Social Media Management
+    Then User is navigated to Social Media Management page
   
-#   @SemuaJasa @Jasa
-#   Scenario: User is able to click search engine marketing management
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Search Engine Marketing Management
-#     Then User is navigated to Search Engine Marketing Management page
+  @SemuaJasa @Jasa
+  Scenario: User is able to click search engine marketing management
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Search Engine Marketing Management
+    Then User is navigated to Search Engine Marketing Management page
   
-#   @SemuaJasa @Jasa
-#   Scenario: User is able to click email marketing management
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Email Marketing Management
-#     Then User is navigated to whatsapp Email Marketing page
+  @SemuaJasa @Jasa
+  Scenario: User is able to click email marketing management
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Email Marketing Management
+    Then User is navigated to whatsapp Email Marketing page
   
-#   @SemuaJasa @Jasa
-#   Scenario: User is able to click fotografi dan video produk
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Fotografi dan Video Produk
-#     Then User is navigated to whatsapp Fotografi and Video Produk
+  @SemuaJasa @Jasa
+  Scenario: User is able to click fotografi dan video produk
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Fotografi dan Video Produk
+    Then User is navigated to whatsapp Fotografi and Video Produk
   
-#   @SemuaJasa @Jasa
-#   Scenario: User is able to click Webinar
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Webinar
-#     Then User is navigated to whatsapp Webinar
+  @SemuaJasa @Jasa
+  Scenario: User is able to click Webinar
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Webinar
+    Then User is navigated to whatsapp Webinar
   
-#   @Training&Coaching @SemuaJasa @Jasa
-#   Scenario: User is able to click Training & Coaching
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Semua Jasa page via url
-#     And User click Training and Coaching
-#     Then User is navigated to Training Coaching page
+  @Training&Coaching @SemuaJasa @Jasa
+  Scenario: User is able to click Training & Coaching
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Semua Jasa page via url
+    And User click Training and Coaching
+    Then User is navigated to Training Coaching page
 
 # ####  Tentang Jasa Management Marketplace -> /jasa-kami/management-marketplace
 #   @TentangJasaMarketplace @Jasa

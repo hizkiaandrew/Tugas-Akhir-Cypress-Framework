@@ -22,6 +22,43 @@ When("User click Marketplace Management", () => {
     semuaJasa.clickMarketplaceManagementBtn();
 });
 
-Then("User is navigated to Marketplace Management page", () => {
-    
+And("User click Social Media Management", () => {
+    semuaJasa.clickSocialMediaManagementBtn();
+});
+
+And("User click Search Engine Marketing Management", () => {
+    semuaJasa.clickSearchEngineMarketingManagementBtn();
+});
+
+Then("User is navigated to Search Engine Marketing Management page", () => {
+    semuaJasa.verifyWhatsappJasaSearchEngineMarketingManagement();
+});
+
+And("User click Email Marketing Management", () => {
+    semuaJasa.clickEmailMarketingManagementBtn();
+});
+
+Then("User is navigated to whatsapp Email Marketing page", () => {
+    semuaJasa.verifyWhatsappEmailMarketing();
+});
+
+And("User click Fotografi dan Video Produk", () => {
+    semuaJasa.clickBtnFotografiDanVideoProduk();
+});
+
+Then("User is navigated to whatsapp Fotografi and Video Produk",
+  () => {
+    semuaJasa.verifyWhatsappFotografiDanVideoProduk();
+  });
+
+And("User click Webinar", () => {
+    semuaJasa.clickBtnWebinar();
+});
+
+Then("User is navigated to whatsapp Webinar", () => {
+    semuaJasa.verifyWhatsappWebinar();
+});
+
+And("User click Training and Coaching", () => {
+    semuaJasa.clickTrainingAndCoaching();
 });
