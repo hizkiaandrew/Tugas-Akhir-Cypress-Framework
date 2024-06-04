@@ -73,53 +73,53 @@ Feature: Jasa Functionality
     And User click Training and Coaching
     Then User is navigated to Training Coaching page
 
-# ####  Tentang Jasa Management Marketplace -> /jasa-kami/management-marketplace
-#   @TentangJasaMarketplace @Jasa
-#   Scenario: User is able to access Tentang Jasa Management Marketplace by url
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Management Marketplace via url
-#     Then  User in Tentang Jasa Management Marketplace page
+####  Tentang Jasa Management Marketplace -> /jasa-kami/management-marketplace
+  @TentangJasaMarketplace @Jasa
+  Scenario: User is able to access Tentang Jasa Management Marketplace by url
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Management Marketplace via url
+    Then  User in Tentang Jasa Management Marketplace page
   
-#   @TentangJasaMarketplace @Jasa
-#   Scenario: User is able to click paket pak encep in Tentang Jasa Management Marketplace page
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Management Marketplace via url
-#     And User click paket jasa pak encep
-#     Then User is navigated to whatsapp jasa pak encep
+  @TentangJasaMarketplace @Jasa
+  Scenario: User is able to click paket pak encep in Tentang Jasa Management Marketplace page
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Management Marketplace via url
+    And User click paket jasa pak encep
+    Then User is navigated to whatsapp jasa pak encep
   
-#   @TentangJasaMarketplace @Jasa
-#   Scenario: User is able to click paket pak rosidi in Tentang Jasa Management Marketplace page
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Management Marketplace via url
-#     And User click paket jasa pak rosidi
-#     Then User is navigated to whatsapp jasa pak rosidi
+  @TentangJasaMarketplace @Jasa
+  Scenario: User is able to click paket pak rosidi in Tentang Jasa Management Marketplace page
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Management Marketplace via url
+    And User click paket jasa pak rosidi
+    Then User is navigated to whatsapp jasa pak rosidi
   
-#   @TentangJasaMarketplace @Jasa
-#   Scenario: User is able to click paket pak odang in Tentang Jasa Management Marketplace page
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Management Marketplace via url
-#     And User click paket jasa pak odang
-#     Then User is navigated to whatsapp jasa pak odang
+  @TentangJasaMarketplace @Jasa
+  Scenario: User is able to click paket pak odang in Tentang Jasa Management Marketplace page
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Management Marketplace via url
+    And User click paket jasa pak odang
+    Then User is navigated to whatsapp jasa pak odang
   
-#   @TentangJasaMarketplace @Jasa
-#   Scenario: User is able to click paket pak untung in Tentang Jasa Management Marketplace page
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Management Marketplace via url
-#     And User click paket jasa pak untung
-#     Then User is navigated to whatsapp jasa pak untung
+  @TentangJasaMarketplace @Jasa
+  Scenario: User is able to click paket pak untung in Tentang Jasa Management Marketplace page
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Management Marketplace via url
+    And User click paket jasa pak untung
+    Then User is navigated to whatsapp jasa pak untung
 
 # ####  Pilihan Jasa Management Marketplace -> /jasa-kami/marketplace
-#   @PilihanJasaMarketplace @Jasa
-#   Scenario: User is able to access Pilihan Jasa Management by url
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Pilihan Jasa Management Marketplace via url
-#     Then User is navigated to Jasa Management Markeplace
+  @PilihanJasaMarketplace @Jasa
+  Scenario: User is able to access Pilihan Jasa Management by url
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Pilihan Jasa Management Marketplace via url
+    Then User is navigated to Jasa Management Markeplace
   
 #   @PilihanJasaMarketplace @Jasa
 #   Scenario Outline: User is able to click some service in Pilihan Jasa Management Marketplace page

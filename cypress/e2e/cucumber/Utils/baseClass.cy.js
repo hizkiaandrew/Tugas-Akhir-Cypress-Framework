@@ -8,6 +8,12 @@ export const scrollLoop = (pixel, counter) => {
   }
 };
 
+export const scrollThenClick = (selector) => {
+  cy.get(selector).scrollIntoView();
+  cy.scrollTo(0, 100);
+  cy.get(selector).click();
+}
+
 export const setNewTabLink = () => {
   cy.window().then((win) => {
     cy.stub(win, "open")
