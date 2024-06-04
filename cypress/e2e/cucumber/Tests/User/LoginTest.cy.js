@@ -2,6 +2,7 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import login from "../../Pages/User/LoginPage.cy";
 import home from "../../Pages/User/Homepage.cy";
+import { TEST_EMAIL, TEST_PASSWORD } from "../../Utils/variable";
 When("User go to Login Page via url", () => {
   login.goToLoginWithURL();
 });
@@ -41,4 +42,11 @@ And("Error wrong email or password message showed", () => {
 
 And("Error email format message showed", () => {
   login.wrongEmailFormatShowed();
+});
+
+Given("User is already logged in", () => {
+  login.goToLoginWithURL();
+  login.inputEmail(TEST_EMAIL);
+  login.inputPassword(TEST_PASSWORD);
+  login.clickMasukBtn();
 });

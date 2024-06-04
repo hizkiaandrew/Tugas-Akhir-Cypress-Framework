@@ -1,3 +1,6 @@
+export const TEST_EMAIL = "testcomplete515@gmail.com";
+export const TEST_PASSWORD = "Hz271100";
+
 export const HOME_URL = "https://staging.komunitasmea.com/";
 export const LOGIN_URL = "https://staging.komunitasmea.com/login";
 export const SEMUA_JASA_URL = "https://staging.komunitasmea.com/jasa-kami";

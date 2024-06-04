@@ -9,3 +9,13 @@ When("User go to Pilihan Jasa Management Marketplace via url", () => {
 Then("User is navigated to Marketplace Management page", () => {
     pilihanJasaMarketplace.verifyUserPilihanJasaMarketplacePage();
 });
+
+Then("User is navigated to Jasa Management Markeplace", () => {
+    pilihanJasaMarketplace.verifyUserPilihanJasaMarketplacePage();
+});
+And("User click service {string} in Pilihan Jasa Management Marketplace", (locator) => {
+    pilihanJasaMarketplace.clickService(locator);
+});
+Then("User is navigated to whatsapp {string} or checkout page Jasa Management Marketplace", (url) => {
+    pilihanJasaMarketplace.isUserClickSayaMauOrKontakAdminBtn(url);
+});

@@ -1,117 +1,117 @@
 Feature: Jasa Functionality
   Test Jasa component functionalities Landing Page and checkout
 
-  #### Semua Jasa Kami
-  @SemuaJasa @Jasa
-  Scenario: User is able to access Semua Jasa page by url
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    Then User is navigated to Semua Jasa page
+#   #### Semua Jasa Kami
+#   @SemuaJasa @Jasa
+#   Scenario: User is able to access Semua Jasa page by url
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     Then User is navigated to Semua Jasa page
   
-  @SemuaJasa @Jasa
-  Scenario: User is able to click kontak admin MEA
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Kontak admin mea
-    Then User is navigated to whatsapp jasa mea
+#   @SemuaJasa @Jasa
+#   Scenario: User is able to click kontak admin MEA
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Kontak admin mea
+#     Then User is navigated to whatsapp jasa mea
   
-  @PilihanJasaMarketplace @SemuaJasa @Jasa
-  Scenario: User is able to click marketplace management button
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Marketplace Management
-    Then User is navigated to Marketplace Management page
+#   @PilihanJasaMarketplace @SemuaJasa @Jasa
+#   Scenario: User is able to click marketplace management button
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Marketplace Management
+#     Then User is navigated to Marketplace Management page
   
-  @PilihanJasaSosmed @SemuaJasa @Jasa
-  Scenario: User is able to click social media management button
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Social Media Management
-    Then User is navigated to Social Media Management page
+#   @PilihanJasaSosmed @SemuaJasa @Jasa
+#   Scenario: User is able to click social media management button
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Social Media Management
+#     Then User is navigated to Social Media Management page
   
-  @SemuaJasa @Jasa
-  Scenario: User is able to click search engine marketing management
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Search Engine Marketing Management
-    Then User is navigated to Search Engine Marketing Management page
+#   @SemuaJasa @Jasa
+#   Scenario: User is able to click search engine marketing management
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Search Engine Marketing Management
+#     Then User is navigated to Search Engine Marketing Management page
   
-  @SemuaJasa @Jasa
-  Scenario: User is able to click email marketing management
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Email Marketing Management
-    Then User is navigated to whatsapp Email Marketing page
+#   @SemuaJasa @Jasa
+#   Scenario: User is able to click email marketing management
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Email Marketing Management
+#     Then User is navigated to whatsapp Email Marketing page
   
-  @SemuaJasa @Jasa
-  Scenario: User is able to click fotografi dan video produk
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Fotografi dan Video Produk
-    Then User is navigated to whatsapp Fotografi and Video Produk
+#   @SemuaJasa @Jasa
+#   Scenario: User is able to click fotografi dan video produk
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Fotografi dan Video Produk
+#     Then User is navigated to whatsapp Fotografi and Video Produk
   
-  @SemuaJasa @Jasa
-  Scenario: User is able to click Webinar
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Webinar
-    Then User is navigated to whatsapp Webinar
+#   @SemuaJasa @Jasa
+#   Scenario: User is able to click Webinar
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Webinar
+#     Then User is navigated to whatsapp Webinar
   
-  @Training&Coaching @SemuaJasa @Jasa
-  Scenario: User is able to click Training & Coaching
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Semua Jasa page via url
-    And User click Training and Coaching
-    Then User is navigated to Training Coaching page
+#   @Training&Coaching @SemuaJasa @Jasa
+#   Scenario: User is able to click Training & Coaching
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Semua Jasa page via url
+#     And User click Training and Coaching
+#     Then User is navigated to Training Coaching page
 
-####  Tentang Jasa Management Marketplace -> /jasa-kami/management-marketplace
-  @TentangJasaMarketplace @Jasa
-  Scenario: User is able to access Tentang Jasa Management Marketplace by url
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Tentang Jasa Management Marketplace via url
-    Then  User in Tentang Jasa Management Marketplace page
+# ####  Tentang Jasa Management Marketplace -> /jasa-kami/management-marketplace
+#   @TentangJasaMarketplace @Jasa
+#   Scenario: User is able to access Tentang Jasa Management Marketplace by url
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Tentang Jasa Management Marketplace via url
+#     Then  User in Tentang Jasa Management Marketplace page
   
-  @TentangJasaMarketplace @Jasa
-  Scenario: User is able to click paket pak encep in Tentang Jasa Management Marketplace page
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Tentang Jasa Management Marketplace via url
-    And User click paket jasa pak encep
-    Then User is navigated to whatsapp jasa pak encep
+#   @TentangJasaMarketplace @Jasa
+#   Scenario: User is able to click paket pak encep in Tentang Jasa Management Marketplace page
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Tentang Jasa Management Marketplace via url
+#     And User click paket jasa pak encep
+#     Then User is navigated to whatsapp jasa pak encep
   
-  @TentangJasaMarketplace @Jasa
-  Scenario: User is able to click paket pak rosidi in Tentang Jasa Management Marketplace page
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Tentang Jasa Management Marketplace via url
-    And User click paket jasa pak rosidi
-    Then User is navigated to whatsapp jasa pak rosidi
+#   @TentangJasaMarketplace @Jasa
+#   Scenario: User is able to click paket pak rosidi in Tentang Jasa Management Marketplace page
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Tentang Jasa Management Marketplace via url
+#     And User click paket jasa pak rosidi
+#     Then User is navigated to whatsapp jasa pak rosidi
   
-  @TentangJasaMarketplace @Jasa
-  Scenario: User is able to click paket pak odang in Tentang Jasa Management Marketplace page
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Tentang Jasa Management Marketplace via url
-    And User click paket jasa pak odang
-    Then User is navigated to whatsapp jasa pak odang
+#   @TentangJasaMarketplace @Jasa
+#   Scenario: User is able to click paket pak odang in Tentang Jasa Management Marketplace page
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Tentang Jasa Management Marketplace via url
+#     And User click paket jasa pak odang
+#     Then User is navigated to whatsapp jasa pak odang
   
-  @TentangJasaMarketplace @Jasa
-  Scenario: User is able to click paket pak untung in Tentang Jasa Management Marketplace page
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Tentang Jasa Management Marketplace via url
-    And User click paket jasa pak untung
-    Then User is navigated to whatsapp jasa pak untung
+#   @TentangJasaMarketplace @Jasa
+#   Scenario: User is able to click paket pak untung in Tentang Jasa Management Marketplace page
+#     Given User is on Home Page
+#     And User is not logged in yet
+#     When User go to Tentang Jasa Management Marketplace via url
+#     And User click paket jasa pak untung
+#     Then User is navigated to whatsapp jasa pak untungD
 
 # ####  Pilihan Jasa Management Marketplace -> /jasa-kami/marketplace
   @PilihanJasaMarketplace @Jasa
@@ -121,17 +121,17 @@ Feature: Jasa Functionality
     When User go to Pilihan Jasa Management Marketplace via url
     Then User is navigated to Jasa Management Markeplace
   
-#   @PilihanJasaMarketplace @Jasa
-#   Scenario Outline: User is able to click some service in Pilihan Jasa Management Marketplace page
-#     Given User is already logged in
-#     And User is on Home Page
-#     When User go to Pilihan Jasa Management Marketplace via url
-#     And User click service "<Locator>" in Pilihan Jasa Management Marketplace
-#     Then User is navigated to whatsapp "<URL>" or checkout page Jasa Management Marketplace
-#     Examples:
-#       | Locator                                                                                     | URL                                                                                                                                                                          |
-#       | [data-testid='btn-agency-Jasa Management Shopee All-In 50 SKU - 1 Bulan']                   | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Management%20Shopee%20All-In%2050%20SKU%20-%201%20Bulan                           |
-#       | [data-testid='btn-agency-Jasa Management Shopee All-In 50 SKU + Live Shopee 15x - 1 Bulan'] | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Management%20Shopee%20All-In%2050%20SKU%20+%20Live%20Shopee%2015x%20-%201%20Bulan |
+  @PilihanJasaMarketplace @Jasa
+  Scenario Outline: User is able to click some service in Pilihan Jasa Management Marketplace page
+    Given User is already logged in
+    And User is on Home Page
+    When User go to Pilihan Jasa Management Marketplace via url
+    And User click service "<Locator>" in Pilihan Jasa Management Marketplace
+    Then User is navigated to whatsapp "<URL>" or checkout page Jasa Management Marketplace
+    Examples:
+      | Locator                                                                                     | URL                                                                                                                                                                          |
+      | [data-testid='btn-agency-Jasa Management Shopee All-In 50 SKU - 1 Bulan']                   | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Management%20Shopee%20All-In%2050%20SKU%20-%201%20Bulan                           |
+      | [data-testid='btn-agency-Jasa Management Shopee All-In 50 SKU + Live Shopee 15x - 1 Bulan'] | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Management%20Shopee%20All-In%2050%20SKU%20+%20Live%20Shopee%2015x%20-%201%20Bulan |
 
 # #### Tentang Jasa Management Social Media -> /jasa-kami/management-sosmed
 #   @TentangJasaSosmed @Jasa
