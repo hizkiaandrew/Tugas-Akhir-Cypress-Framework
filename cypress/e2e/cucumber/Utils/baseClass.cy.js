@@ -16,24 +16,48 @@ export const scrollThenClick = (selector) => {
 }
 
 
-
-export const getTextElementByElement = (selector) => {
-  // let text;
-  // element.invoke('text').then(($el) => {
-  //   text =  $el.text();
-  //   cy.log("test : "+text);
-  // });
-  // cy.log("test2 : "+text);
-  let textValue;
-  cy.get(selector).then(($el) => {
-    textValue = $el.text();
-    // cy.wrap(textValue).as('wrapValue');
-  });
-  cy.log("ResultText :" + textValue);
-
-  // // cy.log("Title : ", getText);
-  return "Test";
+export const getTextFromButtonElementJasa = (selector) => {
+  return new Promise((resolve, reject) => {
+    cy.get(selector)
+      .each(($el) => {
+        if ($el.text() == "Saya Mau") {
+          resolve("Saya Mau")
+        } else {
+          reject($el.text())
+        }
+      })
+  })
 }
+
+// export const getTextFromButtonElementJasa = (selector) => {
+//   const textValue = [];
+//   let result = new Promise((resolve, reject) => {
+//     cy.get(selector)
+//       .each(($el) => textValue.push($el.text()))
+//       .then(() => {
+//         cy.log(textValue.join(","));
+//         if (textValue.at(0) == "Saya Mau") {
+//           resolve("Saya Mau");
+//         } else {
+//           reject("xxx");
+//         }
+//       });
+//   })
+//   return result.then((selector) => {});
+//   // let result;
+//   cy.get(selector)
+//     .each(($el) => textValue.push($el.text()))
+//     .then(() => {
+//       cy.log(textValue.join(","));
+//       if (textValue.at(0) == "Saya Mau") {
+//         result = "Saya Mau";
+//       } else {
+//         result = "xxx";
+//       }
+//     });
+//   // cy.log(textValue.pop());
+//   return result;
+// };
 
 export const setNewTabLink = () => {
   cy.window().then((win) => {

@@ -1,12 +1,11 @@
-import { JASA_KAMI_MARKETPLACE_URL } from "../../Utils/variable";
 import {
+  getTextFromButtonElementJasa,
   scrollLoop,
-  scrollThenClick,
-  getTextElementByElement,
 } from "../../Utils/baseClass.cy";
+import { JASA_KAMI_MARKETPLACE_URL } from "../../Utils/variable";
 
 class PilihanJasaMarketplacePage {
-  buttonTitle;
+  buttonTitle = "kosongan"
 
   verifyUserPilihanJasaMarketplacePage() {
     cy.url().should("include", JASA_KAMI_MARKETPLACE_URL);
@@ -19,7 +18,16 @@ class PilihanJasaMarketplacePage {
     cy.wait(500);
     let element =  cy.get(selector);
     element.scrollIntoView();
-    getTextElementByElement(selector);
+    // this.buttonTitle = getTextFromButtonElementJasa(selector);
+    // cy.log("button : " + getTextFromButtonElementJasa(selector));
+    getTextFromButtonElementJasa(selector).then((message) => {
+      cy.log("button : " + message)
+      this.buttonTitle = message
+    }).catch((error) => {
+      cy.log("button : " + error)
+      this.buttonTitle = error
+    })
+    cy.log("result : " + this.buttonTitle)
     // cy.log("title1 : " + this.buttonTitle);
     // cy.log("title2 : " + getTextElementByElement(element));
     // element.click();
