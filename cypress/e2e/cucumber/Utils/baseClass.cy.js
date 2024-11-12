@@ -15,50 +15,6 @@ export const scrollThenClick = (selector) => {
   element.click();
 }
 
-
-export const getTextFromButtonElementJasa = (selector) => {
-  return new Promise((resolve, reject) => {
-    cy.get(selector)
-      .each(($el) => {
-        if ($el.text() == "Saya Mau") {
-          resolve("Saya Mau")
-        } else {
-          reject($el.text())
-        }
-      })
-  })
-}
-
-// export const getTextFromButtonElementJasa = (selector) => {
-//   const textValue = [];
-//   let result = new Promise((resolve, reject) => {
-//     cy.get(selector)
-//       .each(($el) => textValue.push($el.text()))
-//       .then(() => {
-//         cy.log(textValue.join(","));
-//         if (textValue.at(0) == "Saya Mau") {
-//           resolve("Saya Mau");
-//         } else {
-//           reject("xxx");
-//         }
-//       });
-//   })
-//   return result.then((selector) => {});
-//   // let result;
-//   cy.get(selector)
-//     .each(($el) => textValue.push($el.text()))
-//     .then(() => {
-//       cy.log(textValue.join(","));
-//       if (textValue.at(0) == "Saya Mau") {
-//         result = "Saya Mau";
-//       } else {
-//         result = "xxx";
-//       }
-//     });
-//   // cy.log(textValue.pop());
-//   return result;
-// };
-
 export const setNewTabLink = () => {
   cy.window().then((win) => {
     cy.stub(win, "open")

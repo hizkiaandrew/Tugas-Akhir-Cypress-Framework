@@ -17,15 +17,20 @@ class LoginPage {
   }
 
   clickMasukBtn() {
-    cy.get("[data-testid='login-btn-login']").click();
+    let element = cy.get("[data-testid='login-btn-login']");
+    element.scrollIntoView();
+    element.click();
   }
 
   wrongEmailPasswordShowed() {
-    cy.get("[data-testid='messagebox-error']").should('be.visible');
+    cy.get("[data-testid='messagebox-error']").should("be.visible");
   }
 
   wrongEmailFormatShowed() {
-    cy.get("[data-testid='login-error-message-email']").should('be.visible');
+    cy.get("[data-testid='login-error-message-email']").should("be.visible");
+  }
+  verifyUserAlredyLoggedIn() {
+    
   }
 }
 const login = new LoginPage();
