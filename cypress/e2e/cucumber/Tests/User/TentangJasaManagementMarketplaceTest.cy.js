@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import { Then, And } from "cypress-cucumber-preprocessor/steps";
-import tentangJasaManagement from "../../Pages/User/TentangJasaManagementPage.cy";
+import { And, Then } from "cypress-cucumber-preprocessor/steps";
+import tentangJasaManagement from "../../Pages/User/TentangJasaManagementMarketplacePage.cy";
 
 When("User go to Tentang Jasa Management Marketplace via url", () => {
     tentangJasaManagement.goToJasaManagementWithUrl();

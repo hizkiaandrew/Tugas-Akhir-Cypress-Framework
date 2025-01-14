@@ -30,7 +30,8 @@ class LoginPage {
     cy.get("[data-testid='login-error-message-email']").should("be.visible");
   }
   verifyUserAlredyLoggedIn() {
-    
+    cy.wait(3000)
+    cy.getCookie("staging-UserID").should('exist');
   }
 }
 const login = new LoginPage();

@@ -8,6 +8,8 @@ export const JASA_KAMI_MARKETPLACE_URL =
   "https://staging.komunitasmea.com/jasa-kami/marketplace";
 export const JASA_KAMI_SOCMED_URL =
   "https://staging.komunitasmea.com/jasa-kami/social-media";
+export const TENTANG_JASA_MANAGEMENT_SOCMED_URL =
+  "https://staging.komunitasmea.com/jasa-kami/management-sosmed";
 export const TRAINING_AND_COACHING_URL =
   "https://staging.komunitasmea.com/jasa-kami/training-coaching";
 export const TENTANG_JASA_MANAGEMENT_URL =

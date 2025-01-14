@@ -1,11 +1,11 @@
+import { scrollLoop, scrollThenClick, setNewTabLink } from "../../Utils/baseClass.cy";
 import {
   TENTANG_JASA_MANAGEMENT_URL,
   WHATSAPP_JASA_PAK_ENCEP_MANAGEMENT_URL,
-  WHATSAPP_JASA_PAK_ROSIDI_MANAGEMENT_URL,
   WHATSAPP_JASA_PAK_ODANG_MANAGEMENT_URL,
+  WHATSAPP_JASA_PAK_ROSIDI_MANAGEMENT_URL,
   WHATSAPP_JASA_PAK_UNTUNG_MANAGEMENT_URL,
 } from "../../Utils/variable";
-import { scrollLoop, setNewTabLink, scrollThenClick } from "../../Utils/baseClass.cy";
 class TentangJasaMangementPage {
   verifyUserinJasaManagementPage() {
     cy.url().should("include", TENTANG_JASA_MANAGEMENT_URL);
