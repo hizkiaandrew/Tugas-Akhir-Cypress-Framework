@@ -19,10 +19,11 @@ class TentangJasaMangementPage {
     scrollLoop(10000, 2);
     cy.wait(500);
     setNewTabLink();
-    scrollThenClick("[data-testid='marketplace-package'] > div.d-lg-flex.d-none [data-testid='btn-agency-PAK ENCEP']");
+    scrollThenClick("[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK ENCEP']");
   }
 
   verifyWhatsappJasaPakEncep() {
+    cy.wait(500);
     cy.url().should("include", WHATSAPP_JASA_PAK_ENCEP_MANAGEMENT_URL);
   }
 
@@ -31,11 +32,12 @@ class TentangJasaMangementPage {
     cy.wait(500);
     setNewTabLink();
     scrollThenClick(
-      "[data-testid='marketplace-package'] > div.d-lg-flex.d-none [data-testid='btn-agency-PAK ROSIDI']"
+      "[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK ROSIDI']"
     );
   }
 
   verifyWhatsappJasaPakRosidi() {
+    cy.wait(500);
     cy.url().should("include", WHATSAPP_JASA_PAK_ROSIDI_MANAGEMENT_URL);
   }
 
@@ -44,11 +46,12 @@ class TentangJasaMangementPage {
     cy.wait(500);
     setNewTabLink();
     scrollThenClick(
-      "[data-testid='marketplace-package'] > div.d-lg-flex.d-none [data-testid='btn-agency-PAK ODANG']"
+      "[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK ODANG']"
     );
   }
 
   verifyWhatsappJasaPakOdang() {
+    cy.wait(500);
     cy.url().should("include", WHATSAPP_JASA_PAK_ODANG_MANAGEMENT_URL);
   }
 
@@ -57,11 +60,12 @@ class TentangJasaMangementPage {
     cy.wait(500);
     setNewTabLink();
     scrollThenClick(
-      "[data-testid='marketplace-package'] > div.d-lg-flex.d-none [data-testid='btn-agency-PAK UNTUNG']"
+      "[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK UNTUNG']"
     );
   }
 
   verifyWhatsappJasaPakUntung() {
+    cy.wait(500);
     cy.url().should("include", WHATSAPP_JASA_PAK_UNTUNG_MANAGEMENT_URL);
   }
 }

@@ -8,3 +8,6 @@ class TentangJasaManagementSocmedPage {
     cy.url().should("include", TENTANG_JASA_MANAGEMENT_SOCMED_URL);
   }
 }
+
+const tentangJasaMangementSocmed = new TentangJasaManagementSocmedPage();
+export default tentangJasaMangementSocmed;

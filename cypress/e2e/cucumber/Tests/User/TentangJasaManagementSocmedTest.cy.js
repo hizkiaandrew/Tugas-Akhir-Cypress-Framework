@@ -2,7 +2,7 @@
 import tentangJasaMangementSocmed from "../../Pages/User/TentangJasaManagementSocmedPage.cy";
 
 When("User go to Tentang Jasa Management Socmed via url", () => {
-  tentangJasaMangementSocmed.goToJasassManagementSocmedWithUrl();
+  tentangJasaMangementSocmed.goToJasaManagementSocmedWithUrl();
 });
 
 Then("User in Tentang Jasa Management Socmed page", () => {
