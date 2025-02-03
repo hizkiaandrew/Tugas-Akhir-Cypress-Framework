@@ -15,5 +15,21 @@ And("User click paket jasa bu lastri on Tentang Jasa Socmed", () => {
 });
 
 Then("User is navigated to whatsapp jasa bu lastri on Tentang Jasa Socmed", () => {
-  tentangJasaMangementSocmed.isWhatsappBuLastriSameLink();
+  tentangJasaMangementSocmed.verifyWhatsappJasaBuLastri();
+});
+
+And("User click paket jasa bu lastri plus on Tentang Jasa Socmed", () => {
+  tentangJasaMangementSocmed.clickJasaBuLastriPlus();
+});
+
+Then("User is navigated to whatsapp jasa bu lastri plus on Tentang Jasa Socmed", () => {
+  tentangJasaMangementSocmed.verifyWhatsappJasaBuLastriPlus();
+});
+
+And("User click paket jasa bu sisil on Tentang Jasa Socmed", () => {
+  tentangJasaMangementSocmed.clickJasaBuSisil();
+});
+
+Then("User is navigated to whatsapp jasa bu sisil on Tentang Jasa Socmed", () => {
+  tentangJasaMangementSocmed.verifyWhatsappJasaBuSisil();
 });
