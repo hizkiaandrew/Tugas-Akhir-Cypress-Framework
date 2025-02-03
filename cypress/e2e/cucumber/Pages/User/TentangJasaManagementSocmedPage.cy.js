@@ -11,6 +11,7 @@ class TentangJasaManagementSocmedPage {
   verifyUserinJasaManagementSocmedPage() {
     cy.url().should("include", TENTANG_JASA_MANAGEMENT_SOCMED_URL);
   }
+<<<<<<< HEAD
 
   clickJasaBuLastri() {
     scrollLoop(3000, 4);
@@ -29,5 +30,9 @@ class TentangJasaManagementSocmedPage {
     cy.url().should("include", WHATSAPP_JASA_BU_LASTRI_SOSMED_URL);
   }
 }
+=======
+}
+
+>>>>>>> fb616da2cc37e5175df9814103706dca3b96f825
 const tentangJasaMangementSocmed = new TentangJasaManagementSocmedPage();
 export default tentangJasaMangementSocmed;
