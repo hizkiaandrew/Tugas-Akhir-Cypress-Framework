@@ -15,6 +15,12 @@ export const scrollThenClick = (selector) => {
   element.click();
 }
 
+export const scrollUntilElementView = (selector) => {
+  let element = cy.get(selector);
+  element.scrollIntoView();
+  cy.scrollTo(0, 100);
+}
+
 export const setNewTabLink = () => {
   cy.window().then((win) => {
     cy.stub(win, "open")

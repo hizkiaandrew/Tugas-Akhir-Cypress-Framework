@@ -31,3 +31,5 @@ export const WHATSAPP_JASA_PAK_ODANG_MANAGEMENT_URL =
   "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20Marketplace%20*PAK%20ODANG*";
 export const WHATSAPP_JASA_PAK_UNTUNG_MANAGEMENT_URL =
   "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20Marketplace%20*PAK%20UNTUNG*";
+export const WHATSAPP_JASA_BU_LASTRI_SOSMED_URL =
+  "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20Social%20Media%20*BU%20LASTRI*";
