@@ -165,12 +165,12 @@ Feature: Jasa Functionality
     Then User is navigated to whatsapp jasa bu sisil on Tentang Jasa Socmed
 
 #     #### Tentang Jasa Management Tiktokshop -> /jasa-kami/tiktok-shop
-#   @TentangJasaTiktok @Jasa
-#   Scenario: User is able to access Tentang Jasa Tiktok Shop by url
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Tiktok Shop via url
-#     Then  User in Tentang Jasa Tiktok Shop page
+  @TentangJasaTiktok @Jasa
+  Scenario: User is able to access Tentang Jasa Tiktok Shop by url
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Tiktok Shop via url
+    Then  User in Tentang Jasa Tiktok Shop page
   
 #   @TentangJasaTiktok @Jasa
 #   Scenario: User is able to click paket bu lastri in Tentang Jasa Tiktok Shop page

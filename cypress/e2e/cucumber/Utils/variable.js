@@ -14,6 +14,8 @@ export const TRAINING_AND_COACHING_URL =
   "https://staging.komunitasmea.com/jasa-kami/training-coaching";
 export const TENTANG_JASA_MANAGEMENT_URL =
   "https://staging.komunitasmea.com/jasa-kami/management-marketplace";
+export const TENTANG_JASA_MANAGEMENT_TIKTOK_SHOP_URL =
+  "https://staging.komunitasmea.com/jasa-kami/tiktok-shop";
 export const CHECKOUT_JASA_URL = "https://staging.komunitasmea.com/checkout-jasa";
 
 export const WHATSAPP_JASA_KONTAK_ADMIN_URL = "https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20MEA%20Digital%20Marketing";
@@ -33,3 +35,9 @@ export const WHATSAPP_JASA_PAK_UNTUNG_MANAGEMENT_URL =
   "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20Marketplace%20*PAK%20UNTUNG*";
 export const WHATSAPP_JASA_BU_LASTRI_SOSMED_URL =
   "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20Social%20Media%20*BU%20LASTRI*";
+export const  WHATSAPP_JASA_BU_LASTRI_PLUS_SOSMED_URL = "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20Social%20Media%20*BU%20LASTRI%2B*";
+export const WHATSAPP_JASA_BU_SISIL_SOSMED_URL = "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20Social%20Media%20*BU%20SISIL*";
+export const WHATSAPP_JASA_BU_LASTRI_TIKTOK_SHOP_URL = "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20TikTok%20Shop%20*BU%20LASTRI*";
+export const WHATSAPP_JASA_BU_LASTRI_PLUS_TIKTOK_SHOP_URL = "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20TikTok%20Shop%20*BU%20LASTRI%2B*";
+export const WHATSAPP_JASA_BU_SISIL_TIKTOK_SHOP_URL =
+  "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Komunitas%20MEA?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20TikTok%20Shop%20*BU%20SISIL*";
