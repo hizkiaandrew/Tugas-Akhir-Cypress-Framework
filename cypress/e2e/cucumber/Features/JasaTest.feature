@@ -172,68 +172,68 @@ Feature: Jasa Functionality
     When User go to Tentang Jasa Tiktok Shop via url
     Then  User in Tentang Jasa Tiktok Shop page
   
-#   @TentangJasaTiktok @Jasa
-#   Scenario: User is able to click paket bu lastri in Tentang Jasa Tiktok Shop page
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Tiktok Shop via url
-#     And User click paket jasa bu lastri on Tentang Jasa Tiktok Shop
-#     Then User is navigated to whatsapp jasa bu lastri on Tentang Jasa Tiktok Shop
+  @TentangJasaTiktok @Jasa
+  Scenario: User is able to click paket bu lastri in Tentang Jasa Tiktok Shop page
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Tiktok Shop via url
+    And User click paket jasa bu lastri on Tentang Jasa Tiktok Shop
+    Then User is navigated to whatsapp jasa bu lastri on Tentang Jasa Tiktok Shop
   
-#   @TentangJasaTiktok @Jasa
-#   Scenario: User is able to click paket bu lastri plus in Tentang Jasa Management Socmed page
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Tiktok Shop via url
-#     And User click paket jasa bu lastri plus on Tentang Jasa Tiktok Shop
-#     Then User is navigated to whatsapp jasa bu lastri plus on Tentang Jasa Tiktok Shop
+  @TentangJasaTiktok @Jasa
+  Scenario: User is able to click paket bu lastri plus in Tentang Jasa Management Socmed page
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Tiktok Shop via url
+    And User click paket jasa bu lastri plus on Tentang Jasa Tiktok Shop
+    Then User is navigated to whatsapp jasa bu lastri plus on Tentang Jasa Tiktok Shop
   
-#   @TentangJasaTiktok @Jasa
-#   Scenario: User is able to click paket bu sisil in Tentang Jasa Management Socmed page
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Tentang Jasa Tiktok Shop via url
-#     And User click paket jasa bu sisil on Tentang Jasa Tiktok Shop
-#     Then User is navigated to whatsapp jasa bu sisil on Tentang Jasa Tiktok Shop
+  @TentangJasaTiktok @Jasa
+  Scenario: User is able to click paket bu sisil in Tentang Jasa Management Socmed page
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Tentang Jasa Tiktok Shop via url
+    And User click paket jasa bu sisil on Tentang Jasa Tiktok Shop
+    Then User is navigated to whatsapp jasa bu sisil on Tentang Jasa Tiktok Shop
 
 # ## Pilihan Jasa Management Social Media -> /jasa-kami/social-media
-#   @PilihanJasaSosmed @Jasa
-#   Scenario: User in able to access Pilihan jasa Socmed by url
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Pilihan Jasa Management Socmed via url
-#     Then User in Pilihan Jasa Management Socmed page
+  @PilihanJasaSosmed @Jasa
+  Scenario: User in able to access Pilihan jasa Socmed by url
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Pilihan Jasa Management Socmed via url
+    Then User in Pilihan Jasa Management Socmed page
   
 #   @PilihanJasaSosmed @Jasa
-#   Scenario Outline: User click some service in Pilihan Jasa Management Social Media page
-#     Given User is already logged in
-#     And User is on Home Page
-#     When User go to Pilihan Jasa Management Socmed via url
-#     And User in "<locator-tab>" tab
-#     When User click service "<locator>" in Pilihan Jasa Management Social Media
-#     Then User is navigated to whatsapp "<URL>" or checkout page Pilihan Jasa Management Social Media
-#     Examples:
-#       |locator                                                               | locator-tab                    | URL                                                                                                                                    |
-#       |[data-testid='btn-agency-Jasa Video Only Tiktok - 15 Video']          | [data-testid='TikTok-frame']   | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Video%20Only%20Tiktok%20-%2015%20Video      |
-#       |[data-testid='btn-agency-FB/IG Ads Selama 1 Bulan']                   | [data-testid='facebook-frame'] | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20FB/IG%20Ads%20Selama%201%20Bulan                   |
-#       |[data-testid='btn-agency-Jasa Management Instagram Selama 1 Bulan']   | [data-testid='instagram-frame']| https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Management%20Instagram%20Selama%201%20Bulan |
+  Scenario Outline: User click some service in Pilihan Jasa Management Social Media page
+    Given User is already logged in
+    And User is on Home Page
+    When User go to Pilihan Jasa Management Socmed via url
+    And User in "<locator-tab>" tab
+    When User click service "<locator>" in Pilihan Jasa Management Social Media
+    Then User is navigated to whatsapp "<URL>" or checkout page Pilihan Jasa Management Social Media
+    Examples:
+      |locator                                                               | locator-tab                    | URL                                                                                                                                    |
+      |[data-testid='btn-agency-Jasa Video Only Tiktok - 15 Video']          | [data-testid='TikTok-frame']   | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Video%20Only%20Tiktok%20-%2015%20Video      |
+      |[data-testid='btn-agency-FB/IG Ads Selama 1 Bulan']                   | [data-testid='facebook-frame'] | https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20FB/IG%20Ads%20Selama%201%20Bulan                   |
+      |[data-testid='btn-agency-Jasa Management Instagram Selama 1 Bulan']   | [data-testid='instagram-frame']| https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20Management%20Instagram%20Selama%201%20Bulan |
 
 # ## Training & Coaching -> /jasa-kami/training-coaching
   
-#   @Training&Coaching @Jasa
-#   Scenario: User is able to access Training and Coaching page by url
-#     Given User is on Home Page
-#     And User is not logged in yet
-#     When User go to Training and Coaching via url
-#     Then User in Training and Coaching page
+  @Training&Coaching @Jasa
+  Scenario: User is able to access Training and Coaching page by url
+    Given User is on Home Page
+    And User is not logged in yet
+    When User go to Training and Coaching via url
+    Then User in Training and Coaching page
   
-#   @Training&Coaching @Jasa
-#   Scenario Outline: User click Training & Coaching service in Training & Coaching page
-#     Given User is already logged in
-#     And User is on Home Page
-#     When User go to Training and Coaching via url
-#     And User click service "<locator>" in Training & Coaching page
-#     Then User is navigated to checkout page Training and Coaching
-#     Examples:
-#       |locator                                                                                    |
-#       |[data-testid='btn-agency-All In Workshop + Training + System CS - Reseller - Admin Online']|
+  @Training&Coaching @Jasa
+  Scenario Outline: User click Training & Coaching service in Training & Coaching page
+    Given User is already logged in
+    And User is on Home Page
+    When User go to Training and Coaching via url
+    And User click service "<locator>" in Training & Coaching page
+    Then User is navigated to checkout page Training and Coaching
+    Examples:
+      |locator                                                                                    |
+      |[data-testid='btn-agency-All In Workshop + Training + System CS - Reseller - Admin Online']|
