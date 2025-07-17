@@ -1,7 +1,6 @@
 Feature: Jasa Functionality
   Test Jasa component functionalities Landing Page and checkout
 
-<<<<<<< HEAD
 #   #### Semua Jasa Kami
 #   @SemuaJasa @Jasa
 #   Scenario: User is able to access Semua Jasa page by url
@@ -73,8 +72,8 @@ Feature: Jasa Functionality
 #     When User go to Semua Jasa page via url
 #     And User click Training and Coaching
 #     Then User is navigated to Training Coaching page
-=======
-  # #### Semua Jasa Kami
+
+# #### Semua Jasa Kami
   # @SemuaJasa @Jasa
   # Scenario: User is able to access Semua Jasa page by url
   #   Given User is on Home Page
@@ -145,7 +144,6 @@ Feature: Jasa Functionality
   #   When User go to Semua Jasa page via url
   #   And User click Training and Coaching
   #   Then User is navigated to Training Coaching page
->>>>>>> fb616da2cc37e5175df9814103706dca3b96f825
 
 # ####  Tentang Jasa Management Marketplace -> /jasa-kami/management-marketplace
 #   @TentangJasaMarketplace @Jasa
