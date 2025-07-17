@@ -33,3 +33,9 @@ export const setNewTabLink = () => {
     .as("open");
   });
 }
+
+export const clickNewTab = (selector) => {
+  cy.wait(500);
+  setNewTabLink();
+  scrollThenClick(selector);
+}

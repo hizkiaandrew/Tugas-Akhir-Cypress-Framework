@@ -1,4 +1,4 @@
-import { scrollLoop, scrollThenClick, setNewTabLink } from "../../Utils/baseClass.cy";
+import { scrollLoop, scrollThenClick, setNewTabLink, clickNewTab } from "../../Utils/baseClass.cy";
 import {
   TENTANG_JASA_MANAGEMENT_URL,
   WHATSAPP_JASA_PAK_ENCEP_MANAGEMENT_URL,
@@ -17,9 +17,9 @@ class TentangJasaMangementPage {
 
   clickPaketPakEncep() {
     scrollLoop(10000, 2);
-    cy.wait(500);
-    setNewTabLink();
-    scrollThenClick("[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK ENCEP']");
+    clickNewTab(
+      "[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK ENCEP']"
+    );
   }
 
   verifyWhatsappJasaPakEncep() {
@@ -29,9 +29,7 @@ class TentangJasaMangementPage {
 
   clickPaketPakRosidi() {
     scrollLoop(10000, 2);
-    cy.wait(500);
-    setNewTabLink();
-    scrollThenClick(
+    clickNewTab(
       "[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK ROSIDI']"
     );
   }
@@ -43,9 +41,7 @@ class TentangJasaMangementPage {
 
   clickPaketPakOdang() {
     scrollLoop(10000, 2);
-    cy.wait(500);
-    setNewTabLink();
-    scrollThenClick(
+    clickNewTab(
       "[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK ODANG']"
     );
   }
@@ -57,9 +53,7 @@ class TentangJasaMangementPage {
 
   clickPaketPakUntung() {
     scrollLoop(10000, 2);
-    cy.wait(500);
-    setNewTabLink();
-    scrollThenClick(
+    clickNewTab(
       "[data-testid='marketplace-package'] > div.d-lg-flex.d-none button[data-testid='btn-agency-PAK UNTUNG']"
     );
   }
