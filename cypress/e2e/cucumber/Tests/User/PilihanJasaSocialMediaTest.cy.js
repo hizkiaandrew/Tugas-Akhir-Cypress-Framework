@@ -1,6 +1,10 @@
 /// <reference types="cypress" />
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
+import { And, Then, When } from "cypress-cucumber-preprocessor/steps";
 import pilihanJasaSocialMedia from "../../Pages/User/PilihanJasaSocialMediaPage.cy";
+
+When("User go to Pilihan Jasa Management Socmed via url", () => {
+  pilihanJasaSocialMedia.goToPilihanJasaSocmedPageWithUrl();
+});
 
 Then("User is navigated to Social Media Management page", () => {
   pilihanJasaSocialMedia.verifyUserPilihanJasaSocialMediaPage();
@@ -17,7 +21,7 @@ When(
 );
 
 Then(
-  "User is navigated to whatsapp {string} or checkout page Pilihan Jasa Management Social Media", () => {
+  "User is navigated to whatsapp {string} or checkout page Pilihan Jasa Management Social Media", (url) => {
     pilihanJasaSocialMedia.isUserClickSayaMauOrKontakAdminBtn(url);
   }
 );
