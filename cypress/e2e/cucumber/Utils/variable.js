@@ -46,3 +46,15 @@ export const WHATSAPP_JASA_BU_LASTRI_PLUS_TIKTOK_SHOP_URL =
   "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Skilskul?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20TikTok%20Shop%20*BU%20LASTRI%2B*";
 export const WHATSAPP_JASA_BU_SISIL_TIKTOK_SHOP_URL =
   "https://api.whatsapp.com/send?phone=6281280832339&text=Halo%20ini%20dengan%20tim%20marketing%20Skilskul?%20Saya%20mau%20tanya%20tentang%20Jasa%20Management%20TikTok%20Shop%20*BU%20SISIL*";
+
+export const SHOPEE_PREMIUM_LP_URL = "https://staging.skilskul.co.id/kelas-shopee";
+export const TIKTOK_PREMIUM_LP_URL = "https://staging.skilskul.co.id/kelas-tiktok";
+export const SHOPEE_PREMIUM_CHECKOUT_URL = "https://staging.skilskul.co.id/checkout/1";
+export const TIKTOK_PREMIUM_CHECKOUT_URL = "https://staging.skilskul.co.id/checkout/4";
+export const MARKETPLACE_MASTERY_CHECKOUT_URL =
+  "https://staging.skilskul.co.id/checkout/2";
+export const LP_PREMIUM_SHOPEE_BUNDLE_CHECKOUT_URL =
+  "https://staging.skilskul.co.id/checkout/1?addon=1";
+export const LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL =
+  "https://staging.skilskul.co.id/checkout/4?addon=2";
+export const LEARNING_PAGE_URL = "https://staging.skilskul.co.id/learning";
