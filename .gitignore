@@ -129,5 +129,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-cypress\reports
-cypress\screenshots
+cypress\reports\*
+cypress\screenshots\*
+combined-report.json
+fixed-report.json

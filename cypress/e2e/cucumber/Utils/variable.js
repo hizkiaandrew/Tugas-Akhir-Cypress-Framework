@@ -58,3 +58,5 @@ export const LP_PREMIUM_SHOPEE_BUNDLE_CHECKOUT_URL =
 export const LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL =
   "https://staging.skilskul.co.id/checkout/4?addon=2";
 export const LEARNING_PAGE_URL = "https://staging.skilskul.co.id/learning";
+
+export const SEARCH_PAGE_URL = "https://staging.skilskul.co.id/search";

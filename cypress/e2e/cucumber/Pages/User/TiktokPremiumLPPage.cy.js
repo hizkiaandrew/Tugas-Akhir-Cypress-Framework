@@ -1,8 +1,9 @@
+import { scrollLoop, scrollUntilElementView } from "../../Utils/baseClass.cy";
 import {
-  scrollLoop,
-  scrollUntilElementView
-} from "../../Utils/baseClass.cy";
-import { TIKTOK_PREMIUM_LP_URL } from "../../Utils/variable";
+  LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL,
+  TIKTOK_PREMIUM_CHECKOUT_URL,
+  TIKTOK_PREMIUM_LP_URL,
+} from "../../Utils/variable";
 
 class TiktokPremiumLPPage {
   goToTiktokPremiumLPByUrl() {
@@ -13,26 +14,51 @@ class TiktokPremiumLPPage {
     cy.url().should("include", TIKTOK_PREMIUM_LP_URL);
   }
 
-  clickSosmedTab(locatorTab) {
+  clickSayaMauTiktokPremiumPlus() {
+    scrollLoop(7000, 7);
+    cy.wait(2000);
+    scrollUntilElementView("#section_price .tiktok-package-grid");
     scrollUntilElementView(
-      "div.bg-white.p-0.container-fluid > div.px-lg-0 > div.mb-48px.mx-auto > p.text-medium"
+      "#section_price .tiktok-package-grid [data-testid='tiktok-package-premium-plus'] [data-testid='package-tiktok-premium-plus'] .list-package-header div div.list-package-title"
     );
-    cy.wait(500);
-    let element = cy.get(locatorTab);
-    element.click();
+    let buttonCheckoutTiktokPremiumPlus = cy.get(
+      "#section_price .tiktok-package-grid [data-testid='tiktok-package-premium-plus'] [data-testid='package-tiktok-premium-plus'] .list-package-header div:nth-child(4) button"
+    );
+    buttonCheckoutTiktokPremiumPlus.click();
   }
 
-  clickServiceInPilihanJasaManagementSocmed(locator) {
-    scrollLoop(3000, 2);
-    cy.wait(500);
-    let element = cy.get(locator);
-    element.scrollIntoView();
-    element.click();
+  verifyUserInCheckoutSuperMentorTiktokBundle() {
+    cy.url().should("include", LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL);
   }
 
-  isUserClickSayaMauOrKontakAdminBtn(url) {
-    // cy.log(url);
-    cy.url().should("include", CHECKOUT_JASA_URL);
+  clickSayaMauTiktokPremium() {
+    scrollLoop(7000, 7);
+    cy.wait(2000);
+    scrollUntilElementView("#section_price .tiktok-package-grid");
+    scrollUntilElementView(
+      "#section_price .tiktok-package-grid [data-testid='tiktok-package-premium-plus'] [data-testid='package-tiktok-premium-plus'] .list-package-header div div.list-package-title"
+    );
+    let buttonCheckoutTiktokPremium = cy.get(
+      "#section_price .tiktok-package-grid [data-testid='package-tiktok-premium'] .list-package-header div:nth-child(4) button"
+    );
+    buttonCheckoutTiktokPremium.click();
+  }
+
+  verifyUserInCheckoutTiktokPremium() {
+    cy.url().should("include", TIKTOK_PREMIUM_CHECKOUT_URL);
+  }
+
+  clickLihatJasaMagementSocialMedia() {
+    scrollLoop(8000, 7);
+    cy.wait(2000);
+    scrollUntilElementView("#section_price .tiktok-package-grid");
+    scrollUntilElementView(
+      "#section_price .tiktok-package-grid [data-testid='tiktok-package-premium-plus'] [data-testid='package-tiktok-premium-plus'] .list-package-header div div.list-package-title"
+    );
+    let buttonLihatJasaManagementSosmed = cy.get(
+      "#section_price .tiktok-package-grid [data-testid='package-management-social-media'] .list-package-header div:nth-child(4) button"
+    );
+    buttonLihatJasaManagementSosmed.click();
   }
 }
 

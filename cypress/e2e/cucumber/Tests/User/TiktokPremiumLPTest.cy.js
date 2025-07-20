@@ -10,20 +10,24 @@ Then("User is navigated to Tiktok Premium LP", () => {
   tiktokPremiumLP.verifyUserInTiktokPremiumLPPage();
 });
 
-And("User in {string} tab", (locatorTab) => {
-  pilihanJasaSocialMedia.clickSosmedTab(locatorTab);
+And("User click Saya Mau on Tiktok Premium Plus", () => {
+  tiktokPremiumLP.clickSayaMauTiktokPremiumPlus();
 });
 
-When(
-  "User click service {string} in Pilihan Jasa Management Social Media",
-  (locator) => {
-    pilihanJasaSocialMedia.clickServiceInPilihanJasaManagementSocmed(locator);
-  }
-);
+Then("User is navigated to checkout page Super Mentor Tiktok Bundle", () => {
+  tiktokPremiumLP.verifyUserInCheckoutSuperMentorTiktokBundle();
+});
 
-Then(
-  "User is navigated to whatsapp {string} or checkout page Pilihan Jasa Management Social Media",
-  (url) => {
-    pilihanJasaSocialMedia.isUserClickSayaMauOrKontakAdminBtn(url);
-  }
-);
+And("User click Saya Mau on Tiktok Premium", () => {
+  tiktokPremiumLP.clickSayaMauTiktokPremium();
+});
+
+Then("User is navigated to checkout page Tiktok Premium", () => {
+  tiktokPremiumLP.verifyUserInCheckoutTiktokPremium();
+});
+
+And("User click Lihat Jasa on Management Social Media", () => {
+  tiktokPremiumLP.clickLihatJasaMagementSocialMedia();
+});
+
+

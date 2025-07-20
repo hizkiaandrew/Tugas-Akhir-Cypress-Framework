@@ -10,18 +10,35 @@ Then("User is navigated to Shopee Premium LP", () => {
   shopeePremiumLP.verifyUserInShopeePremiumLPPage();
 });
 
-And("User in {string} tab", (locatorTab) => {
-  pilihanJasaSocialMedia.clickSosmedTab(locatorTab);
+And(
+  "User click Saya Mau on Marketplace Mastery Basic from Shopee Premium LP",
+  () => {
+    shopeePremiumLP.clickSayaMauMarketplaceMasteryBasic();
+  }
+);
+
+Then("User is navigated to checkout page Marketplace Mastery Basic", () => {
+  shopeePremiumLP.verifyUserInCheckoutPageMarketplaceMasteryBasic();
 });
 
-When(
-  "User click service {string} in Pilihan Jasa Management Social Media", (locator) => {
-    pilihanJasaSocialMedia.clickServiceInPilihanJasaManagementSocmed(locator);
-  }
-);
+And("User click Saya Mau on Shopee Premium", () => {
+  shopeePremiumLP.clickSayaMauShopeePremium();
+});
 
-Then(
-  "User is navigated to whatsapp {string} or checkout page Pilihan Jasa Management Social Media", (url) => {
-    pilihanJasaSocialMedia.isUserClickSayaMauOrKontakAdminBtn(url);
-  }
-);
+Then("User is navigated to checkout page Shopee Premium", () => {
+  shopeePremiumLP.verifyUserInCheckoutPageShopeePremium();
+});
+
+And("User click Saya Mau on Shopee Premium Plus", () => {
+  shopeePremiumLP.clickSayaMauShopeePremiumPlus();
+});
+
+Then("User is navigated to checkout page Super Mentor Shopee Bundle", () => {
+  shopeePremiumLP.verifyUserInCheckoutSuperMentorShopeeBundle();
+});
+
+And("User click Lihat Jasa on Management Marketplace", () => {
+  shopeePremiumLP.clickLihatJasaManagementMarketplace();
+});
+
+
