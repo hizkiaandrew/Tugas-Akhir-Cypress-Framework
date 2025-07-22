@@ -1,20 +1,20 @@
-import { scrollLoop, setNewTabLink } from "../../Utils/baseClass.cy";
+import { goToPageByUrl, isContainSameLink, scrollLoop, scrollThenClick, setNewTabLink } from "../../Utils/baseClass.cy";
 import {
   SEMUA_JASA_URL,
-  WHATSAPP_JASA_KONTAK_ADMIN_URL,
-  WHATSAPP_JASA_SEARCH_ENGINE_MARKETING_URL,
   WHATSAPP_JASA_EMAIL_MARKETING_URL,
   WHATSAPP_JASA_FOTO_VIDEO_URL,
+  WHATSAPP_JASA_KONTAK_ADMIN_URL,
+  WHATSAPP_JASA_SEARCH_ENGINE_MARKETING_URL,
   WHATSAPP_JASA_WEBINAR_URL,
 } from "../../Utils/variable";
 
 class SemuaJasaPage {
   goToSemuaJasaWithUrl() {
-    cy.visit(SEMUA_JASA_URL);
+    goToPageByUrl(SEMUA_JASA_URL);
   }
 
   verifyUserInSemuaJasaPage() {
-    cy.url().should("eq", SEMUA_JASA_URL);
+    isContainSameLink(SEMUA_JASA_URL);
   }
 
   clickKontakAdminMeaBtn() {
@@ -27,26 +27,28 @@ class SemuaJasaPage {
   }
 
   clickMarketplaceManagementBtn() {
-    cy.scrollTo(0, 5000);
+    scrollLoop(5000,1)
     cy.wait(500);
-    cy.get(
+    scrollThenClick(
       "div[data-testid='agencypricelist-marketplace-management'] a[data-testid='btn-agencypricelist-link-marketplace']"
-    ).click();
+    );
   }
 
   clickSocialMediaManagementBtn() {
     scrollLoop(5000, 2);
-    cy.get(
+    cy.wait(500);
+    scrollThenClick(
       "div[data-testid='agencypricelist-socmed'] a[data-testid='btn-agencypricelist-link-socmed']"
-    ).click();
+    );
   }
 
   clickSearchEngineMarketingManagementBtn() {
     scrollLoop(5000, 3);
+    cy.wait(500);
     setNewTabLink();
-    cy.get(
+    scrollThenClick(
       "div[data-testid='agencypricelist-search-engine'] button[data-testid='btn-agencypricelist-email-marketing-management']"
-    ).click();
+    );
   }
 
   verifyWhatsappJasaSearchEngineMarketingManagement() {
@@ -54,11 +56,12 @@ class SemuaJasaPage {
   }
 
   clickEmailMarketingManagementBtn() {
-    scrollLoop(6000, 4);
+    scrollLoop(5000, 4);
+    cy.wait(500);
     setNewTabLink();
-    cy.get(
+    scrollThenClick(
       "div[data-testid='agencypricelist-email-marketing-management'] button[data-testid='btn-agencypricelist-email-marketing-management']"
-    ).click();
+    );
   }
 
   verifyWhatsappEmailMarketing() {
@@ -66,11 +69,12 @@ class SemuaJasaPage {
   }
 
   clickBtnFotografiDanVideoProduk() {
-    scrollLoop(7000, 5);
+    scrollLoop(5000, 5);
+    cy.wait(500);
     setNewTabLink();
-    cy.get(
+    scrollThenClick(
       "div[data-testid='agencypricelist-photo-video-product'] button[data-testid='btn-agencypricelist-photo-video-product']"
-    ).click();
+    );
   }
 
   verifyWhatsappFotografiDanVideoProduk() {
@@ -78,11 +82,12 @@ class SemuaJasaPage {
   }
 
   clickBtnWebinar() {
-    scrollLoop(8000, 6);
+    scrollLoop(5000, 6);
+    cy.wait(500);
     setNewTabLink();
-    cy.get(
+    scrollThenClick(
       "div[data-testid='agencypricelist-webinar'] button[data-testid='btn-agencypricelist-webinar']"
-    ).click();
+    );
   }
 
   verifyWhatsappWebinar() {
@@ -90,10 +95,11 @@ class SemuaJasaPage {
   }
 
   clickTrainingAndCoaching() {
-    scrollLoop(8000, 6);
-    cy.get(
+    scrollLoop(5000, 6);
+    cy.wait(500);
+    scrollThenClick(
       "div[data-testid='agencypricelist-training-coaching'] a[data-testid='btn-agencypricelist-link-training-coaching']"
-    ).click();
+    );
   }
 }
 

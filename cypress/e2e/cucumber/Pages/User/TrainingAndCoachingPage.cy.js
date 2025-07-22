@@ -1,12 +1,10 @@
 import {
-  scrollLoop,
-  scrollUntilElementView,
-  setNewTabLink,
-  clickNewTab
+    scrollLoop,
+    scrollUntilElementViewBySelector
 } from "../../Utils/baseClass.cy";
 import {
-  TRAINING_AND_COACHING_URL,
-  CHECKOUT_JASA_URL
+    CHECKOUT_JASA_URL,
+    TRAINING_AND_COACHING_URL
 } from "../../Utils/variable";
 class TrainingAndCoachingPage {
   verifyUserInTrainingCoachingPage() {
@@ -18,8 +16,8 @@ class TrainingAndCoachingPage {
   }
 
   clickServiceTrainingAndCoaching(locator) {
-    scrollLoop(2000,2);
-    scrollUntilElementView("[data-placeholder='Masukkan Deskripsi'] ul");
+    scrollLoop(2000, 2);
+    scrollUntilElementViewBySelector("[data-placeholder='Masukkan Deskripsi'] ul");
     let element = cy.get(locator);
     element.click();
   }

@@ -57,6 +57,9 @@ export const LP_PREMIUM_SHOPEE_BUNDLE_CHECKOUT_URL =
   "https://staging.skilskul.co.id/checkout/1?addon=1";
 export const LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL =
   "https://staging.skilskul.co.id/checkout/4?addon=2";
+export const COURSE_CHECKOUT_PAYMENT_URL = "https://staging.skilskul.co.id/thank-you/";
 export const LEARNING_PAGE_URL = "https://staging.skilskul.co.id/learning";
 
 export const SEARCH_PAGE_URL = "https://staging.skilskul.co.id/search";
+
+export const KUPON_KELAS = "KUPONAUTOMATION";

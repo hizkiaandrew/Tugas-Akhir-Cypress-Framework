@@ -1,10 +1,12 @@
 /// <reference types="cypress" />
 
+
 export const scrollLoop = (pixel, counter) => {
   for (let i = 0; i < counter; i++) {
     cy.wait(250);
     cy.scrollTo(0, pixel);
     cy.wait(250);
+    pixel += pixel;
   }
 };
 
@@ -15,9 +17,15 @@ export const scrollThenClick = (selector) => {
   element.click();
 }
 
-export const scrollUntilElementView = (selector) => {
+export const scrollUntilElementViewBySelector = (selector) => {
   let element = cy.get(selector);
   element.scrollIntoView();
+  cy.scrollTo(0, 100);
+}
+
+export const scrollUntilElementViewByElement = (element) => {
+  element.scrollIntoView();
+  cy.wait(100);
   cy.scrollTo(0, 100);
 }
 
@@ -38,4 +46,32 @@ export const clickNewTab = (selector) => {
   cy.wait(500);
   setNewTabLink();
   scrollThenClick(selector);
+}
+
+export const clickElementBySelector = (selector) => {
+  cy.get(selector).click();
+}
+
+export const goToPageByUrl = (url) => {
+  cy.visit(url);
+}
+
+export const inputByElement = (element, inputText) => {
+  element.type(inputText);
+}
+
+export const isElementLocated = (selector) => {
+  return cy.get(selector).should("be.visible");
+}
+
+export const isElementNotLocated = (selector) => {
+  return cy.get(selector).should("not.exist");
+}
+
+export const isContainSameLink = (actualUrl) => {
+  cy.url().should('include', actualUrl);
+}
+
+export const customWait = (milliseconds) => {
+  cy.wait(milliseconds);
 }

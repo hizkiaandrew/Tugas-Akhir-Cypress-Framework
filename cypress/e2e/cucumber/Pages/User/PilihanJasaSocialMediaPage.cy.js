@@ -1,6 +1,7 @@
 import {
   scrollLoop,
-  scrollUntilElementView
+  scrollThenClick,
+  scrollUntilElementViewBySelector
 } from "../../Utils/baseClass.cy";
 import { CHECKOUT_JASA_URL, JASA_KAMI_SOCMED_URL } from "../../Utils/variable";
 
@@ -14,7 +15,7 @@ class PilihanJasaSocialMediaPage {
   }
 
   clickSosmedTab(locatorTab) {
-    scrollUntilElementView(
+    scrollUntilElementViewBySelector(
       "div.bg-white.p-0.container-fluid > div.px-lg-0 > div.mb-48px.mx-auto > p.text-medium"
     );
     cy.wait(500);
@@ -25,13 +26,10 @@ class PilihanJasaSocialMediaPage {
   clickServiceInPilihanJasaManagementSocmed(locator) {
     scrollLoop(3000, 2);
     cy.wait(500);
-    let element = cy.get(locator);
-    element.scrollIntoView();
-    element.click();
+    scrollThenClick(locator)
   }
 
   isUserClickSayaMauOrKontakAdminBtn(url) {
-    // cy.log(url);
     cy.url().should("include", CHECKOUT_JASA_URL);
   }
 }

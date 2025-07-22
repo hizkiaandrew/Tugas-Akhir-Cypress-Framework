@@ -1,5 +1,6 @@
 import {
-  scrollLoop
+  scrollLoop,
+  scrollThenClick
 } from "../../Utils/baseClass.cy";
 import { CHECKOUT_JASA_URL, JASA_KAMI_MARKETPLACE_URL } from "../../Utils/variable";
 
@@ -15,9 +16,7 @@ class PilihanJasaMarketplacePage {
   clickService(selector) {
     scrollLoop(3000,2); 
     cy.wait(500);
-    let element =  cy.get(selector);
-    element.scrollIntoView();
-    element.click();
+    scrollThenClick(selector);
   }
   isUserClickSayaMauOrKontakAdminBtn(url) {
     cy.log(url);

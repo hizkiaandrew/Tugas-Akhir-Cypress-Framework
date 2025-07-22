@@ -1,8 +1,8 @@
-import { scrollLoop, scrollUntilElementView } from "../../Utils/baseClass.cy";
+import { scrollLoop, scrollUntilElementViewBySelector } from "../../Utils/baseClass.cy";
 import {
-  LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL,
-  TIKTOK_PREMIUM_CHECKOUT_URL,
-  TIKTOK_PREMIUM_LP_URL,
+    LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL,
+    TIKTOK_PREMIUM_CHECKOUT_URL,
+    TIKTOK_PREMIUM_LP_URL,
 } from "../../Utils/variable";
 
 class TiktokPremiumLPPage {
@@ -15,10 +15,10 @@ class TiktokPremiumLPPage {
   }
 
   clickSayaMauTiktokPremiumPlus() {
-    scrollLoop(7000, 7);
+    scrollLoop(7000, 2);
     cy.wait(2000);
-    scrollUntilElementView("#section_price .tiktok-package-grid");
-    scrollUntilElementView(
+    scrollUntilElementViewBySelector("#section_price .tiktok-package-grid");
+    scrollUntilElementViewBySelector(
       "#section_price .tiktok-package-grid [data-testid='tiktok-package-premium-plus'] [data-testid='package-tiktok-premium-plus'] .list-package-header div div.list-package-title"
     );
     let buttonCheckoutTiktokPremiumPlus = cy.get(
@@ -32,10 +32,10 @@ class TiktokPremiumLPPage {
   }
 
   clickSayaMauTiktokPremium() {
-    scrollLoop(7000, 7);
+    scrollLoop(7000, 2);
     cy.wait(2000);
-    scrollUntilElementView("#section_price .tiktok-package-grid");
-    scrollUntilElementView(
+    scrollUntilElementViewBySelector("#section_price .tiktok-package-grid");
+    scrollUntilElementViewBySelector(
       "#section_price .tiktok-package-grid [data-testid='tiktok-package-premium-plus'] [data-testid='package-tiktok-premium-plus'] .list-package-header div div.list-package-title"
     );
     let buttonCheckoutTiktokPremium = cy.get(
@@ -49,10 +49,10 @@ class TiktokPremiumLPPage {
   }
 
   clickLihatJasaMagementSocialMedia() {
-    scrollLoop(8000, 7);
+    scrollLoop(8000, 2);
     cy.wait(2000);
-    scrollUntilElementView("#section_price .tiktok-package-grid");
-    scrollUntilElementView(
+    scrollUntilElementViewBySelector("#section_price .tiktok-package-grid");
+    scrollUntilElementViewBySelector(
       "#section_price .tiktok-package-grid [data-testid='tiktok-package-premium-plus'] [data-testid='package-tiktok-premium-plus'] .list-package-header div div.list-package-title"
     );
     let buttonLihatJasaManagementSosmed = cy.get(

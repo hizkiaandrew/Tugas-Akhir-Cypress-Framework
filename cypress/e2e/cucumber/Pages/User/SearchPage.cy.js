@@ -1,4 +1,4 @@
-import { scrollUntilElementView } from "../../Utils/baseClass.cy";
+import { scrollUntilElementViewBySelector } from "../../Utils/baseClass.cy";
 import { SEARCH_PAGE_URL } from "../../Utils/variable";
 
 class SearchPage {
@@ -7,7 +7,7 @@ class SearchPage {
   }
 
   clickCourse(courseLinkLP) {
-    scrollUntilElementView(".container .section-list-course");
+    scrollUntilElementViewBySelector(".container .section-list-course");
     cy.wait(250);
     let element = cy.get(
       ".container .section-list-course .wrapper-card-result [data-testid='card-body-lesson'] .card-lesson-content .card-detail .actions [href='" +

@@ -1,3 +1,4 @@
+import { scrollThenClick } from "../../Utils/baseClass.cy";
 import { LOGIN_URL } from "../../Utils/variable";
 class LoginPage {
   goToLoginWithURL() {
@@ -17,9 +18,7 @@ class LoginPage {
   }
 
   clickMasukBtn() {
-    let element = cy.get("[data-testid='login-btn-login']");
-    element.scrollIntoView();
-    element.click();
+    scrollThenClick("[data-testid='login-btn-login']");
   }
 
   wrongEmailPasswordShowed() {
