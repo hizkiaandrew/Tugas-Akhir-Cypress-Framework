@@ -75,3 +75,8 @@ export const isContainSameLink = (actualUrl) => {
 export const customWait = (milliseconds) => {
   cy.wait(milliseconds);
 }
+
+export const isContainLinkLP = () => {
+  customWait(500);
+  cy.url().should("include", "https://staging.skilskul.co.id/");
+}

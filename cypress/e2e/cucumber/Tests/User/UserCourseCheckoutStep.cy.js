@@ -3,6 +3,7 @@ import { Then, When } from "cypress-cucumber-preprocessor/steps";
 import userCourseCheckoutPage from "../../Pages/User/UserCourseCheckoutPage.cy";
 
 var isGeneralCouponAvailable;
+var isCouponAcquired;
 When(
   "User go to course {string} Checkout Page by url {string}",
   (courseName, url) => {
@@ -81,3 +82,65 @@ When("User is navigated to payment course page", () => {
 And("Xendit Payment Method showed", () => { 
   userCourseCheckoutPage.verifyXenditPaymentModalShowed();
 });
+
+When("User go to Shopee Premium Thankyou Page by url", () => {
+  userCourseCheckoutPage.goToShopeePremiumThankyouPageByUrl();
+});
+
+Then("User is navigated to Shopee Premium Thankyou Page", () => {
+  userCourseCheckoutPage.verifyUserInShopeePremiumThankyouPage();
+});
+
+When("User click Close Icon on top right Thankyou Page", () => {
+  userCourseCheckoutPage.clickCloseThankyouPage();
+});
+
+Then("User is navigated to Kelas Saya Page", () => {
+  userCourseCheckoutPage.verifyUserInKelasSayaPage();
+});
+
+When("User click Lihat Kupon on bonus coupon", () => {
+  if (userCourseCheckoutPage.verifyIsCouponAcquired()) {
+    isCouponAcquired = true;
+    userCourseCheckoutPage.clickLihatKupon();
+  } else {
+    cy.log("NO Coupon Acquired");
+    isCouponAcquired = false;
+  }
+});
+
+Then("User is navigated to Profile page by Lihat Kupon button", () => {
+    if (isCouponAcquired) {
+      userCourseCheckoutPage.verifyUserInProfilePage();
+    }
+});
+
+When("User click Lihat Semua button on suggested course", () => {
+  userCourseCheckoutPage.clickLihatSemuaButton();
+});
+
+Then("User is navigated to Daftar Kelas Terbaik Page", () => {
+  userCourseCheckoutPage.verifyUserInDaftarKelasTerbaikPage();
+});
+
+When("User click Lihat Kelas on recommended Course card", () => {
+  userCourseCheckoutPage.clickLihatKelas();
+});
+
+Then("User is navigated to Course LP", () => {
+  userCourseCheckoutPage.verfiyUserNavigatedToCourseLP();
+});
+
+When("User click Checkout on Shopee Premium card", () => {
+  userCourseCheckoutPage.clickCheckoutCourse();
+});
+
+When("User click go to Learning Shopee Premium page", () => {
+  userCourseCheckoutPage.clickLearningShopeePremium();
+});
+
+Then("User is navigated to Shopee Premium Learning Page", () => {
+  userCourseCheckoutPage.verifyUserInShopeePremiumLearningPage();
+});
+
+

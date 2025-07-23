@@ -58,6 +58,11 @@ export const LP_PREMIUM_SHOPEE_BUNDLE_CHECKOUT_URL =
 export const LP_PREMIUM_TIKTOK_BUNDLE_CHECKOUT_URL =
   "https://staging.skilskul.co.id/checkout/4?addon=2";
 export const COURSE_CHECKOUT_PAYMENT_URL = "https://staging.skilskul.co.id/thank-you/";
+export const SHOPEE_PREMIUM_THANKYOU_PAGE_URL =
+  "https://staging.skilskul.co.id/thank-you/pembayaran/1";
+export const KELAS_SAYA_URL = "https://staging.skilskul.co.id/kelas-saya";
+export const PROFILE_URL = "https://staging.skilskul.co.id/profile/10";
+export const DAFTAR_KELAS_TERBAIK_URL = "https://staging.skilskul.co.id/daftar-kelas-terbaik";
 export const LEARNING_PAGE_URL = "https://staging.skilskul.co.id/learning";
 
 export const SEARCH_PAGE_URL = "https://staging.skilskul.co.id/search";

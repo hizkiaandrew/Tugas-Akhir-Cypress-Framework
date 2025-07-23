@@ -3,6 +3,7 @@ import {
   customWait,
   goToPageByUrl,
   inputByElement,
+  isContainLinkLP,
   isContainSameLink,
   isElementLocated,
   isElementNotLocated,
@@ -10,7 +11,7 @@ import {
   scrollUntilElementViewByElement,
   scrollUntilElementViewBySelector
 } from "../../Utils/baseClass.cy";
-import { COURSE_CHECKOUT_PAYMENT_URL, KUPON_KELAS, SHOPEE_PREMIUM_CHECKOUT_URL, TIKTOK_PREMIUM_CHECKOUT_URL } from "../../Utils/variable";
+import { COURSE_CHECKOUT_PAYMENT_URL, DAFTAR_KELAS_TERBAIK_URL, KELAS_SAYA_URL, KUPON_KELAS, LEARNING_PAGE_URL, SHOPEE_PREMIUM_CHECKOUT_URL, SHOPEE_PREMIUM_THANKYOU_PAGE_URL, TIKTOK_PREMIUM_CHECKOUT_URL } from "../../Utils/variable";
 
 class UserCourseCheckoutPage {
   goToCourseByUrl(url) {
@@ -27,6 +28,10 @@ class UserCourseCheckoutPage {
 
   goToTiktokPremiumCheckoutByUrl() {
     goToPageByUrl(TIKTOK_PREMIUM_CHECKOUT_URL);
+  }
+
+  goToShopeePremiumThankyouPageByUrl() {
+    goToPageByUrl(SHOPEE_PREMIUM_THANKYOU_PAGE_URL);
   }
 
   enterGeneralKuponKelasCode() {
@@ -89,12 +94,10 @@ class UserCourseCheckoutPage {
       "div[data-testid='coupon-modal'] div[data-testid='list-coupon'] div[data-testid='general-coupon-section'] [data-testid='checkout-coupon-general'] [data-testid='coupon-card']:nth-child(1)"
     );
 
-    cy.log("clicked KUPONAUTOMATION");
     //confirm kupon option
     clickElementBySelector(
       "div[data-testid='coupon-modal'] button[data-testid='use-coupon-btn']"
     );
-    cy.log("clicked pakai kupon");
   }
 
   clickResetKuponKelas() {
@@ -147,6 +150,67 @@ class UserCourseCheckoutPage {
 
   verifyXenditPaymentModalShowed() {
     isElementLocated("[data-testid='thankyou-modal-xendit']");
+  }
+
+  verifyUserInShopeePremiumThankyouPage() {
+    isContainSameLink(SHOPEE_PREMIUM_THANKYOU_PAGE_URL);
+  }
+
+  clickCloseThankyouPage() {
+    clickElementBySelector("nav[data-testid='thankyou-page-nav'] a.nav-times");
+  }
+
+  verifyUserInKelasSayaPage() {
+    isContainSameLink(KELAS_SAYA_URL);
+  }
+
+  verifyIsCouponAcquired() {
+    // return cy.get("div.thankyou-purchase div.coupon").expect();
+    return isElementLocated("div.thankyou-purchase div.coupon");
+  }
+
+  clickLihatKupon() {
+    scrollThenClick("div.thankyou-purchase > div > button.see-coupon-btn");
+  }
+
+  verifyUserInProfilePage() {
+    isContainSameLink(PROFILE_URL);
+  }
+
+  clickLihatSemuaButton() {
+    scrollThenClick(
+      "div.thankyou-purchase button[data-testid='see-more-button']"
+    );
+  }
+
+  verifyUserInDaftarKelasTerbaikPage() {
+    isContainSameLink(DAFTAR_KELAS_TERBAIK_URL);
+  }
+
+  clickLihatKelas() {
+    scrollThenClick(
+      "div[data-testid='home-list-class'] div.wrapper-card-lesson:nth-child(1) div.card-detail div.actions a.btn-outline-light-blue"
+    );
+  }
+
+  verfiyUserNavigatedToCourseLP() {
+    isContainLinkLP();
+  }
+
+  clickCheckoutCourse() {
+    scrollThenClick(
+      "div[data-testid='home-list-class'] div.wrapper-card-lesson:nth-child(1) div.card-detail div.actions a.btn-orange"
+    );
+  }
+
+  clickLearningShopeePremium() {
+    scrollThenClick(
+      "div.thankyou-purchase > div > div.learning-video > div.text-lg-left > button"
+    );
+  }
+
+  verifyUserInShopeePremiumLearningPage() {
+    isContainSameLink(LEARNING_PAGE_URL);
   }
 }
 
