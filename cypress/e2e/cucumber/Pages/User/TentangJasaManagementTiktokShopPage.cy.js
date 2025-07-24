@@ -1,5 +1,7 @@
 import {
   clickNewTab,
+  goToPageByUrl,
+  isContainSameLink,
   scrollLoop
 } from "../../Utils/baseClass.cy";
 import {
@@ -10,11 +12,11 @@ import {
 } from "../../Utils/variable";
 class TentangJasaManagementTiktokShopPage {
   goToJasaManagementTiktokShopWithUrl() {
-    cy.visit(TENTANG_JASA_MANAGEMENT_TIKTOK_SHOP_URL);
+    goToPageByUrl(TENTANG_JASA_MANAGEMENT_TIKTOK_SHOP_URL);
   }
 
   verifyUserinJasaManagementTiktokShopPage() {
-    cy.url().should("include", TENTANG_JASA_MANAGEMENT_TIKTOK_SHOP_URL);
+    isContainSameLink(TENTANG_JASA_MANAGEMENT_TIKTOK_SHOP_URL);
   }
 
   clickJasaBuLastri() {
@@ -23,7 +25,7 @@ class TentangJasaManagementTiktokShopPage {
   }
 
   verifyWhatsappJasaBuLastri() {
-    cy.url().should("include", WHATSAPP_JASA_BU_LASTRI_TIKTOK_SHOP_URL);
+    isContainSameLink(WHATSAPP_JASA_BU_LASTRI_TIKTOK_SHOP_URL);
   }
 
   clickJasaBuLastriPlus() {
@@ -34,7 +36,7 @@ class TentangJasaManagementTiktokShopPage {
   }
 
   verifyWhatsappJasaBuLastriPlus() {
-    cy.url().should("include", WHATSAPP_JASA_BU_LASTRI_PLUS_TIKTOK_SHOP_URL);
+    isContainSameLink(WHATSAPP_JASA_BU_LASTRI_PLUS_TIKTOK_SHOP_URL);
   }
 
   clickJasaBuSisil() {
@@ -45,7 +47,7 @@ class TentangJasaManagementTiktokShopPage {
   }
 
   verifyWhatsappJasaBuSisil() {
-    cy.url().should("include", WHATSAPP_JASA_BU_SISIL_TIKTOK_SHOP_URL);
+    isContainSameLink(WHATSAPP_JASA_BU_SISIL_TIKTOK_SHOP_URL);
   }
 }
 const tentangJasaManagementTiktokShop =

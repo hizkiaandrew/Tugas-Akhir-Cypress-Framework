@@ -16,6 +16,7 @@ export const TENTANG_JASA_MANAGEMENT_URL =
   "https://staging.skilskul.co.id/jasa-kami/management-marketplace";
 export const TENTANG_JASA_MANAGEMENT_TIKTOK_SHOP_URL =
   "https://staging.skilskul.co.id/jasa-kami/tiktok-shop";
+export const DAFTAR_KELAS_PREMIUM_URL = "https://staging.skilskul.co.id/daftar-kelas";
 export const CHECKOUT_JASA_URL = "https://staging.skilskul.co.id/checkout-jasa";
 
 export const WHATSAPP_JASA_KONTAK_ADMIN_URL = "https://api.whatsapp.com/send?phone=6281280832339&text=Saya%20mau%20tau%20tentang%20Jasa%20MEA%20Digital%20Marketing";
@@ -64,6 +65,11 @@ export const KELAS_SAYA_URL = "https://staging.skilskul.co.id/kelas-saya";
 export const PROFILE_URL = "https://staging.skilskul.co.id/profile/10";
 export const DAFTAR_KELAS_TERBAIK_URL = "https://staging.skilskul.co.id/daftar-kelas-terbaik";
 export const LEARNING_PAGE_URL = "https://staging.skilskul.co.id/learning";
+
+export const JASA_MANAGEMENT_SHOPEE_CHECKOUT_URL =
+  "https://staging.skilskul.co.id/checkout-jasa/1";
+export const JASA_CHECKOUT_PAYMENT_URL =
+  "https://staging.skilskul.co.id/thank-you-jasa";
 
 export const SEARCH_PAGE_URL = "https://staging.skilskul.co.id/search";
 

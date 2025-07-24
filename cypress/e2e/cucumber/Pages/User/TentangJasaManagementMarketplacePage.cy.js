@@ -1,4 +1,4 @@
-import { scrollLoop, scrollThenClick, setNewTabLink, clickNewTab } from "../../Utils/baseClass.cy";
+import { clickNewTab, customWait, goToPageByUrl, isContainSameLink, scrollLoop } from "../../Utils/baseClass.cy";
 import {
   TENTANG_JASA_MANAGEMENT_URL,
   WHATSAPP_JASA_PAK_ENCEP_MANAGEMENT_URL,
@@ -8,11 +8,11 @@ import {
 } from "../../Utils/variable";
 class TentangJasaMangementPage {
   verifyUserinJasaManagementPage() {
-    cy.url().should("include", TENTANG_JASA_MANAGEMENT_URL);
+    isContainSameLink(TENTANG_JASA_MANAGEMENT_URL);
   }
 
   goToJasaManagementWithUrl() {
-    cy.visit(TENTANG_JASA_MANAGEMENT_URL);
+    goToPageByUrl(TENTANG_JASA_MANAGEMENT_URL);
   }
 
   clickPaketPakEncep() {
@@ -23,8 +23,8 @@ class TentangJasaMangementPage {
   }
 
   verifyWhatsappJasaPakEncep() {
-    cy.wait(500);
-    cy.url().should("include", WHATSAPP_JASA_PAK_ENCEP_MANAGEMENT_URL);
+    customWait(500);
+    isContainSameLink(WHATSAPP_JASA_PAK_ENCEP_MANAGEMENT_URL);
   }
 
   clickPaketPakRosidi() {
@@ -35,8 +35,8 @@ class TentangJasaMangementPage {
   }
 
   verifyWhatsappJasaPakRosidi() {
-    cy.wait(500);
-    cy.url().should("include", WHATSAPP_JASA_PAK_ROSIDI_MANAGEMENT_URL);
+    customWait(500);
+    isContainSameLink(WHATSAPP_JASA_PAK_ROSIDI_MANAGEMENT_URL);
   }
 
   clickPaketPakOdang() {
@@ -47,8 +47,8 @@ class TentangJasaMangementPage {
   }
 
   verifyWhatsappJasaPakOdang() {
-    cy.wait(500);
-    cy.url().should("include", WHATSAPP_JASA_PAK_ODANG_MANAGEMENT_URL);
+    customWait(500);
+    isContainSameLink(WHATSAPP_JASA_PAK_ODANG_MANAGEMENT_URL);
   }
 
   clickPaketPakUntung() {
@@ -59,8 +59,8 @@ class TentangJasaMangementPage {
   }
 
   verifyWhatsappJasaPakUntung() {
-    cy.wait(500);
-    cy.url().should("include", WHATSAPP_JASA_PAK_UNTUNG_MANAGEMENT_URL);
+    customWait(500);
+    isContainSameLink(WHATSAPP_JASA_PAK_UNTUNG_MANAGEMENT_URL);
   }
 }
 

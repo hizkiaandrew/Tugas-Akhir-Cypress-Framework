@@ -1,11 +1,12 @@
-import { HOME_URL } from "../../Utils/variable";
+import { clickElementBySelector, customWait, goToPageByUrl, inputBySelector, isContainSameLink } from "../../Utils/baseClass.cy";
+import { DAFTAR_KELAS_PREMIUM_URL, HOME_URL } from "../../Utils/variable";
 class HomePage {
   goToHomePageByUrl() {
-    cy.visit(HOME_URL);
+    goToPageByUrl(HOME_URL);
   }
 
   verifyUserOnHomePage() {
-    cy.url().should("include", HOME_URL);
+    isContainSameLink(HOME_URL);
   }
 
   verifyUserStagingCookieID() {
@@ -17,20 +18,117 @@ class HomePage {
     this.startQuickTutorial();
   }
   enterTextOnSearchField(courseName) {
-    let element = cy.get(
-      ".container .section-category-and-search .form-input-search form div input[placeholder='Pencarian Kelas dan Event']"
+    inputBySelector(
+      ".container .section-category-and-search .form-input-search form div input[placeholder='Pencarian Kelas dan Event']",
+      courseName
     );
-    element.type(courseName);
   }
 
   clickSearchOnSearchField() {
-    cy.wait(500);
-    let element = cy.get(
+    customWait(500);
+    clickElementBySelector(
       ".container .section-category-and-search .form-input-search form div div.form-input-search__icon svg"
     );
-    element.click();
   }
-  
+
+  clickLoginButton() {
+    customWait(500);
+    clickElementBySelector(
+      "[data-testid='navbar-menu'] [data-testid='navbar-btn-login-register']"
+    );
+  }
+
+  clickSemuaJasaNavbar() {
+    customWait(500);
+    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    customWait(500);
+
+    clickElementBySelector(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Semua Jasa']"
+    );
+  }
+
+  clickTentangJasaManagementMarketplaceNavbar() {
+    customWait(500);
+    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    cy.get(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace']"
+    ).realHover();
+    customWait(500);
+    clickElementBySelector(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace'] li:first-child"
+    );
+  }
+
+  clickPilihanJasaManagementNavbar() {
+    customWait(500);
+    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    customWait(500);
+    cy.get(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace']"
+    ).realHover();
+    customWait(500);
+    clickElementBySelector(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace'] li:nth-child(2)"
+    );
+  }
+
+  clickTentangJasaSocialMediaNavbar() {
+    customWait(500);
+    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    customWait(500);
+    cy.get(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media']"
+    ).realHover();
+    customWait(500);
+    clickElementBySelector(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media'] li:first-child"
+    );
+  }
+
+  clickTentangJasaTiktokShopNavbar() {
+    customWait(500);
+    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    customWait(500);
+    cy.get(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media']"
+    ).realHover();
+    customWait(500);
+    clickElementBySelector(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media'] li:nth-child(2)"
+    );
+  }
+
+  clickPilihanJasaSocialMediaNavbar() {
+    customWait(500);
+    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    // customWait(500);
+    cy.get(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media']"
+    ).realHover();
+    customWait(500);
+    clickElementBySelector(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media'] li:nth-child(3)"
+    );
+  }
+
+  clickTrainingAndCoachingNavbar() {
+    customWait(500);
+    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    // customWait(500);
+    clickElementBySelector(
+      "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Training & Coaching']"
+    );
+  }
+
+  clickKelasNavbar() {
+    customWait(500);
+    clickElementBySelector("[data-testid='sub-nav-user-Kelas']");
+  }
+
+  verifyUserInDaftarKelasPremiumPage() {
+    isContainSameLink(DAFTAR_KELAS_PREMIUM_URL);
+  }
 }
 const home = new HomePage();
 export default home;

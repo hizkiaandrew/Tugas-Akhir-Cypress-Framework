@@ -1,17 +1,17 @@
-import { clickNewTab, scrollLoop } from "../../Utils/baseClass.cy";
+import { clickNewTab, goToPageByUrl, isContainSameLink, scrollLoop } from "../../Utils/baseClass.cy";
 import {
-    TENTANG_JASA_MANAGEMENT_SOCMED_URL,
-    WHATSAPP_JASA_BU_LASTRI_PLUS_SOSMED_URL,
-    WHATSAPP_JASA_BU_LASTRI_SOSMED_URL,
-    WHATSAPP_JASA_BU_SISIL_SOSMED_URL,
+  TENTANG_JASA_MANAGEMENT_SOCMED_URL,
+  WHATSAPP_JASA_BU_LASTRI_PLUS_SOSMED_URL,
+  WHATSAPP_JASA_BU_LASTRI_SOSMED_URL,
+  WHATSAPP_JASA_BU_SISIL_SOSMED_URL,
 } from "../../Utils/variable";
 class TentangJasaManagementSocmedPage {
   goToJasaManagementSocmedWithUrl() {
-    cy.visit(TENTANG_JASA_MANAGEMENT_SOCMED_URL);
+    goToPageByUrl(TENTANG_JASA_MANAGEMENT_SOCMED_URL);
   }
 
   verifyUserinJasaManagementSocmedPage() {
-    cy.url().should("include", TENTANG_JASA_MANAGEMENT_SOCMED_URL);
+    isContainSameLink(TENTANG_JASA_MANAGEMENT_SOCMED_URL);
   }
 
   clickJasaBuLastri() {
@@ -22,7 +22,7 @@ class TentangJasaManagementSocmedPage {
   }
 
   verifyWhatsappJasaBuLastri() {
-    cy.url().should("include", WHATSAPP_JASA_BU_LASTRI_SOSMED_URL);
+    isContainSameLink(WHATSAPP_JASA_BU_LASTRI_SOSMED_URL);
   }
 
   clickJasaBuLastriPlus() {
@@ -33,7 +33,7 @@ class TentangJasaManagementSocmedPage {
   }
 
   verifyWhatsappJasaBuLastriPlus() {
-    cy.url().should("include", WHATSAPP_JASA_BU_LASTRI_PLUS_SOSMED_URL);
+    isContainSameLink(WHATSAPP_JASA_BU_LASTRI_PLUS_SOSMED_URL);
   }
 
   clickJasaBuSisil() {
@@ -44,7 +44,7 @@ class TentangJasaManagementSocmedPage {
   }
 
   verifyWhatsappJasaBuSisil() {
-    cy.url().should("include", WHATSAPP_JASA_BU_SISIL_SOSMED_URL);
+    isContainSameLink(WHATSAPP_JASA_BU_SISIL_SOSMED_URL);
   }
 }
 

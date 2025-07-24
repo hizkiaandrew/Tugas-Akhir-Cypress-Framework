@@ -60,6 +60,10 @@ export const inputByElement = (element, inputText) => {
   element.type(inputText);
 }
 
+export const inputBySelector = (selector, inputText) => {
+  cy.get(selector).type(inputText);
+}
+
 export const isElementLocated = (selector) => {
   return cy.get(selector).should("be.visible");
 }
@@ -69,6 +73,7 @@ export const isElementNotLocated = (selector) => {
 }
 
 export const isContainSameLink = (actualUrl) => {
+  customWait(100);
   cy.url().should('include', actualUrl);
 }
 

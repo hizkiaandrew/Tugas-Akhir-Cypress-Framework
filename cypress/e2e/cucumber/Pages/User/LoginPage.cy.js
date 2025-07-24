@@ -1,20 +1,20 @@
-import { scrollThenClick } from "../../Utils/baseClass.cy";
+import { customWait, goToPageByUrl, inputBySelector, isContainSameLink, isElementLocated, scrollThenClick } from "../../Utils/baseClass.cy";
 import { LOGIN_URL } from "../../Utils/variable";
 class LoginPage {
   goToLoginWithURL() {
-    cy.visit(LOGIN_URL);
+    goToPageByUrl(LOGIN_URL);
   }
 
   verifyUserOnLoginPage() {
-    cy.url().should("eq", LOGIN_URL);
+    isContainSameLink(LOGIN_URL);
   }
 
   inputEmail(email) {
-    cy.get("[data-testid='login-field-email']").type(email);
+    inputBySelector("[data-testid='login-field-email']",email);
   }
 
   inputPassword(password) {
-    cy.get("[data-testid='login-password']").type(password);
+    inputBySelector("[data-testid='login-password']", password);
   }
 
   clickMasukBtn() {
@@ -22,14 +22,14 @@ class LoginPage {
   }
 
   wrongEmailPasswordShowed() {
-    cy.get("[data-testid='messagebox-error']").should("be.visible");
+    isElementLocated("[data-testid='messagebox-error']");
   }
 
   wrongEmailFormatShowed() {
-    cy.get("[data-testid='login-error-message-email']").should("be.visible");
+    isElementLocated("[data-testid='login-error-message-email']");
   }
   verifyUserAlredyLoggedIn() {
-    cy.wait(3000)
+    customWait(3000);
     cy.getCookie("staging-UserID").should('exist');
   }
 }

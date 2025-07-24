@@ -1,24 +1,21 @@
-import { scrollUntilElementViewBySelector } from "../../Utils/baseClass.cy";
+import { clickElementBySelector, customWait, isContainSameLink, scrollUntilElementViewBySelector } from "../../Utils/baseClass.cy";
 import { SEARCH_PAGE_URL } from "../../Utils/variable";
 
 class SearchPage {
   verifyUserInSearchPage() {
-    cy.url().should("include", SEARCH_PAGE_URL);
+    isContainSameLink(SEARCH_PAGE_URL);
   }
 
   clickCourse(courseLinkLP) {
     scrollUntilElementViewBySelector(".container .section-list-course");
-    cy.wait(250);
-    let element = cy.get(
-      ".container .section-list-course .wrapper-card-result [data-testid='card-body-lesson'] .card-lesson-content .card-detail .actions [href='" +
+    customWait(250);
+    clickElementBySelector(".container .section-list-course .wrapper-card-result [data-testid='card-body-lesson'] .card-lesson-content .card-detail .actions [href='" +
         courseLinkLP +
-        "']"
-    );
-    element.click();
+        "']");
   }
 
   verifyIsCourseLPSameLink(url) {
-    cy.url().should("include", url);
+    isContainSameLink(url);
   }
 }
 

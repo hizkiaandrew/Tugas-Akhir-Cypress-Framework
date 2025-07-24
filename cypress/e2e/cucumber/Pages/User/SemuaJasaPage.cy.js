@@ -1,4 +1,4 @@
-import { goToPageByUrl, isContainSameLink, scrollLoop, scrollThenClick, setNewTabLink } from "../../Utils/baseClass.cy";
+import { clickElementBySelector, customWait, goToPageByUrl, isContainSameLink, scrollLoop, scrollThenClick, setNewTabLink } from "../../Utils/baseClass.cy";
 import {
   SEMUA_JASA_URL,
   WHATSAPP_JASA_EMAIL_MARKETING_URL,
@@ -19,16 +19,16 @@ class SemuaJasaPage {
 
   clickKontakAdminMeaBtn() {
     setNewTabLink();
-    cy.get("[data-testid='btn-contact-admin-agencypricelist']").click();
+    clickElementBySelector("[data-testid='btn-contact-admin-agencypricelist']");
   }
 
   verifyWhatsappJasaOpenedOnNewTab() {
-    cy.url().should("include", WHATSAPP_JASA_KONTAK_ADMIN_URL);
+    isContainSameLink(WHATSAPP_JASA_KONTAK_ADMIN_URL);
   }
 
   clickMarketplaceManagementBtn() {
-    scrollLoop(5000,1)
-    cy.wait(500);
+    scrollLoop(5000, 1);
+    customWait(500);
     scrollThenClick(
       "div[data-testid='agencypricelist-marketplace-management'] a[data-testid='btn-agencypricelist-link-marketplace']"
     );
@@ -36,7 +36,7 @@ class SemuaJasaPage {
 
   clickSocialMediaManagementBtn() {
     scrollLoop(5000, 2);
-    cy.wait(500);
+    customWait(500);
     scrollThenClick(
       "div[data-testid='agencypricelist-socmed'] a[data-testid='btn-agencypricelist-link-socmed']"
     );
@@ -44,7 +44,7 @@ class SemuaJasaPage {
 
   clickSearchEngineMarketingManagementBtn() {
     scrollLoop(5000, 3);
-    cy.wait(500);
+    customWait(500);
     setNewTabLink();
     scrollThenClick(
       "div[data-testid='agencypricelist-search-engine'] button[data-testid='btn-agencypricelist-email-marketing-management']"
@@ -52,12 +52,12 @@ class SemuaJasaPage {
   }
 
   verifyWhatsappJasaSearchEngineMarketingManagement() {
-    cy.url().should("include", WHATSAPP_JASA_SEARCH_ENGINE_MARKETING_URL);
+    isContainSameLink(WHATSAPP_JASA_SEARCH_ENGINE_MARKETING_URL);
   }
 
   clickEmailMarketingManagementBtn() {
     scrollLoop(5000, 4);
-    cy.wait(500);
+    customWait(500);
     setNewTabLink();
     scrollThenClick(
       "div[data-testid='agencypricelist-email-marketing-management'] button[data-testid='btn-agencypricelist-email-marketing-management']"
@@ -65,12 +65,12 @@ class SemuaJasaPage {
   }
 
   verifyWhatsappEmailMarketing() {
-    cy.url().should("include", WHATSAPP_JASA_EMAIL_MARKETING_URL);
+    isContainSameLink(WHATSAPP_JASA_EMAIL_MARKETING_URL);
   }
 
   clickBtnFotografiDanVideoProduk() {
     scrollLoop(5000, 5);
-    cy.wait(500);
+    customWait(500);
     setNewTabLink();
     scrollThenClick(
       "div[data-testid='agencypricelist-photo-video-product'] button[data-testid='btn-agencypricelist-photo-video-product']"
@@ -78,12 +78,12 @@ class SemuaJasaPage {
   }
 
   verifyWhatsappFotografiDanVideoProduk() {
-    cy.url().should("include", WHATSAPP_JASA_FOTO_VIDEO_URL);
+    isContainSameLink(WHATSAPP_JASA_FOTO_VIDEO_URL);
   }
 
   clickBtnWebinar() {
     scrollLoop(5000, 6);
-    cy.wait(500);
+    customWait(500);
     setNewTabLink();
     scrollThenClick(
       "div[data-testid='agencypricelist-webinar'] button[data-testid='btn-agencypricelist-webinar']"
@@ -91,12 +91,12 @@ class SemuaJasaPage {
   }
 
   verifyWhatsappWebinar() {
-    cy.url().should("include", WHATSAPP_JASA_WEBINAR_URL);
+    isContainSameLink(WHATSAPP_JASA_WEBINAR_URL);
   }
 
   clickTrainingAndCoaching() {
     scrollLoop(5000, 6);
-    cy.wait(500);
+    customWait(500);
     scrollThenClick(
       "div[data-testid='agencypricelist-training-coaching'] a[data-testid='btn-agencypricelist-link-training-coaching']"
     );

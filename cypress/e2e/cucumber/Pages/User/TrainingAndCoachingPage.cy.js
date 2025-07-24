@@ -1,29 +1,31 @@
 import {
-    scrollLoop,
-    scrollUntilElementViewBySelector
+  clickElementBySelector,
+  goToPageByUrl,
+  isContainSameLink,
+  scrollLoop,
+  scrollUntilElementViewBySelector
 } from "../../Utils/baseClass.cy";
 import {
-    CHECKOUT_JASA_URL,
-    TRAINING_AND_COACHING_URL
+  CHECKOUT_JASA_URL,
+  TRAINING_AND_COACHING_URL
 } from "../../Utils/variable";
 class TrainingAndCoachingPage {
   verifyUserInTrainingCoachingPage() {
-    cy.url().should("include", TRAINING_AND_COACHING_URL);
+    isContainSameLink(TRAINING_AND_COACHING_URL);
   }
 
   goToTrainingAndCoachingWithUrl() {
-    cy.visit(TRAINING_AND_COACHING_URL);
+    goToPageByUrl(TRAINING_AND_COACHING_URL);
   }
 
   clickServiceTrainingAndCoaching(locator) {
     scrollLoop(2000, 2);
     scrollUntilElementViewBySelector("[data-placeholder='Masukkan Deskripsi'] ul");
-    let element = cy.get(locator);
-    element.click();
+    clickElementBySelector(locator);
   }
 
   isUserClickSayaMauOrKontakAdminBtn() {
-    cy.url().should("include", CHECKOUT_JASA_URL);
+    isContainSameLink(CHECKOUT_JASA_URL);
   }
 }
 

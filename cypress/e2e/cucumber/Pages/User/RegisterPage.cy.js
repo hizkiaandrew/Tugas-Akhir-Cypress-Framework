@@ -1,3 +1,4 @@
+import { clickElementBySelector, goToPageByUrl, inputBySelector, isContainSameLink } from "../../Utils/baseClass.cy";
 import { LOGIN_URL } from "../../Utils/variable";
 class RegisterPage {
   generateEmail(length) {
@@ -13,7 +14,7 @@ class RegisterPage {
   }
 
   clickRegisterTab() {
-    cy.get("#form-tab-register").click();
+    clickElementBySelector("#form-tab-register");
   }
 
   verifyUserOnRegisterTab() {
@@ -21,40 +22,40 @@ class RegisterPage {
   }
 
   goToLoginWithURL() {
-    cy.visit(LOGIN_URL);
+    goToPageByUrl(LOGIN_URL);
   }
 
   verifyUserOnLoginPage() {
-    cy.url().should("include", LOGIN_URL);
+    isContainSameLink(LOGIN_URL);
   }
 
   inputUserName(username) {
-    cy.get(
-      "[data-testid='register-field'] [data-testid='register-field-name']"
-    ).type(username);
+    inputBySelector(
+      "[data-testid='register-field'] [data-testid='register-field-name']", username
+    );
   }
 
   inputEmail(email) {
     let generatedEmail = this.generateEmail(10);
-    cy.get(
-      "[data-testid='register-field'] [data-testid='register-field-email']"
-    ).type(email + generatedEmail + "@email.com");
+    inputBySelector(
+      "[data-testid='register-field'] [data-testid='register-field-email']",
+      email + generatedEmail + "@email.com"
+    );
   }
 
   inputPhoneNumber(phoneNumber) {
-    cy.get(
-      "[data-testid='register-field'] [data-testid='register-field-phone-number']"
-    ).type(phoneNumber);
+    inputBySelector(
+      "[data-testid='register-field'] [data-testid='register-field-phone-number']", phoneNumber
+    );
   }
 
   inputPassword(password) {
-    cy.get(
-      "[data-testid='register-field'] [data-testid='register-password']"
-    ).type(password);
+    inputBySelector(
+      "[data-testid='register-field'] [data-testid='register-password']", password);
   }
 
   clickRegisterButton() {
-    cy.get("[data-testid='register-btn-daftar']").click();
+    clickElementBySelector("[data-testid='register-btn-daftar']");
   }
 }
 const register = new RegisterPage();
