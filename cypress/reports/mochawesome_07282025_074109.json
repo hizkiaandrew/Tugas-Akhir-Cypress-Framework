@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-28T00:40:51.983Z",
+    "end": "2025-07-28T00:41:09.008Z",
+    "duration": 17025,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c5c3fac9-60fd-4df8-b036-33340c3c9481",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cucumber\\Features\\LoginTest.feature",
+      "file": "cypress\\e2e\\cucumber\\Features\\LoginTest.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4d1efb0-df3c-4f62-81dc-78603f8f9b4b",
+          "title": "Login Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User is able to access Login page by url",
+              "fullTitle": "Login Functionality User is able to access Login page by url",
+              "timedOut": null,
+              "duration": 1892,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "5954758b-461d-4d6e-a0c8-11d003f88eba",
+              "parentUUID": "e4d1efb0-df3c-4f62-81dc-78603f8f9b4b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User cannot login with wrong email or password (example #1)",
+              "fullTitle": "Login Functionality User cannot login with wrong email or password (example #1)",
+              "timedOut": null,
+              "duration": 2735,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "a31b234d-84d5-451e-bd0c-d13e36bda3cf",
+              "parentUUID": "e4d1efb0-df3c-4f62-81dc-78603f8f9b4b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User cannot login with wrong email or password (example #2)",
+              "fullTitle": "Login Functionality User cannot login with wrong email or password (example #2)",
+              "timedOut": null,
+              "duration": 2648,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "8de54ec5-96c0-4b5e-b045-c35a8fca9588",
+              "parentUUID": "e4d1efb0-df3c-4f62-81dc-78603f8f9b4b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User cannot login with wrong email format (example #1)",
+              "fullTitle": "Login Functionality User cannot login with wrong email format (example #1)",
+              "timedOut": null,
+              "duration": 2441,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "5d9af746-2db7-484f-91e5-f11a67190463",
+              "parentUUID": "e4d1efb0-df3c-4f62-81dc-78603f8f9b4b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can login with inputted credentials (example #1)",
+              "fullTitle": "Login Functionality User can login with inputted credentials (example #1)",
+              "timedOut": null,
+              "duration": 2523,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "71e86987-47a6-47dd-bb30-0e27c462cf28",
+              "parentUUID": "e4d1efb0-df3c-4f62-81dc-78603f8f9b4b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5954758b-461d-4d6e-a0c8-11d003f88eba",
+            "a31b234d-84d5-451e-bd0c-d13e36bda3cf",
+            "8de54ec5-96c0-4b5e-b045-c35a8fca9588",
+            "5d9af746-2db7-484f-91e5-f11a67190463",
+            "71e86987-47a6-47dd-bb30-0e27c462cf28"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12239,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

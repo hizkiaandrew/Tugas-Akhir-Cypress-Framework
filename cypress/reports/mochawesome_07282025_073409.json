@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-28T00:34:00.325Z",
+    "end": "2025-07-28T00:34:09.041Z",
+    "duration": 8716,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bc2257ad-930c-45d0-a809-4c7f41665a2a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cucumber\\Features\\HomePageTest.feature",
+      "file": "cypress\\e2e\\cucumber\\Features\\HomePageTest.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dcd5dcf1-2a1b-445b-87e2-08ee7bb8c3ab",
+          "title": "Homepage Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can access Login Page by click button Daftar/Masuk",
+              "fullTitle": "Homepage Functionality User can access Login Page by click button Daftar/Masuk",
+              "timedOut": null,
+              "duration": 2542,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "81a64d17-645a-4922-863c-56b6f0fdf57e",
+              "parentUUID": "dcd5dcf1-2a1b-445b-87e2-08ee7bb8c3ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can access Daftar Kelas Premium List by navbar Kelas",
+              "fullTitle": "Homepage Functionality User can access Daftar Kelas Premium List by navbar Kelas",
+              "timedOut": null,
+              "duration": 1638,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "4a419113-0738-4c6b-8242-2c59b23851f4",
+              "parentUUID": "dcd5dcf1-2a1b-445b-87e2-08ee7bb8c3ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "81a64d17-645a-4922-863c-56b6f0fdf57e",
+            "4a419113-0738-4c6b-8242-2c59b23851f4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
