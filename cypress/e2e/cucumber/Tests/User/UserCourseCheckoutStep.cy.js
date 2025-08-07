@@ -19,6 +19,14 @@ When("User go to course Shopee Premium Checkout Page by url", () => {
   userCourseCheckoutPage.goToShopePremiumCheckoutByUrl();
 });
 
+Then("User is navigated to Shopee Premium Checkout Page", () => {
+  userCourseCheckoutPage.verifyUserInShopeePremiumCheckoutPage();
+});
+
+Then("User is navigated to Tiktok Premium Checkout Page", () => {
+  userCourseCheckoutPage.verifyUserInTiktokPremiumCheckoutPage();
+});
+
 And("User enter General Kupon Kelas Code", () => {
   userCourseCheckoutPage.enterGeneralKuponKelasCode();
 });

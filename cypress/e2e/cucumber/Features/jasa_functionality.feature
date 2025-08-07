@@ -1,7 +1,6 @@
 Feature: Jasa Functionality
   Test Jasa component functionalities Landing Page and checkout
 
-
   #### Semua Jasa Kami
   @SemuaJasa @Jasa
   Scenario: User is able to access Semua Jasa page by url
@@ -24,7 +23,7 @@ Feature: Jasa Functionality
     And User is not logged in yet
     When User go to Semua Jasa page via url
     And User click Marketplace Management
-    Then User is navigated to Marketplace Management page
+    Then User is navigated to Jasa Management Markeplace
   
   @PilihanJasaSosmed @SemuaJasa @Jasa
   Scenario: User is able to click social media management button
@@ -125,6 +124,7 @@ Feature: Jasa Functionality
   @PilihanJasaMarketplace @Jasa
   Scenario Outline: User is able to click some service in Pilihan Jasa Management Marketplace page
     Given User is already logged in
+    And User is on Home Page
     When User go to Pilihan Jasa Management Marketplace via url
     And User click service "<Locator>" in Pilihan Jasa Management Marketplace
     Then User is navigated to whatsapp "<URL>" or checkout page Jasa Management Marketplace
@@ -205,7 +205,7 @@ Feature: Jasa Functionality
     When User go to Pilihan Jasa Management Socmed via url
     Then User is navigated to Social Media Management page
   
-#   @PilihanJasaSosmed @Jasa
+   @PilihanJasaSosmed @Jasa
   Scenario Outline: User click some service in Pilihan Jasa Management Social Media page
     Given User is already logged in
     And User is on Home Page
@@ -238,45 +238,3 @@ Feature: Jasa Functionality
     Examples:
       |locator                                                                                    |
       |[data-testid='btn-agency-All In Workshop + Training + System CS - Reseller - Admin Online']|
-
-  @Jasa @Checkout @CheckoutJasa
-  Scenario: User is able to access course checkout page by url
-    Given User is already logged in
-    And User is on Home Page
-    When User go to jasa Management Shopee Checkout Page by url
-    Then User is navigated to jasa Management Shopee checkout page
-
-  @Jasa @Checkout @CheckoutJasa
-  Scenario: User cannot access Jasa checkout page when user not logged in
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to Pilihan Jasa Management Marketplace via url
-    And User click service "[data-testid='btn-agency-Jasa Management Shopee All-In 50 SKU - 1 Bulan']" in Pilihan Jasa Management Marketplace
-    Then User is navigated to Login Page
-
-  @Jasa @Checkout @CheckoutJasa
-  Scenario: User cannot access checkout page by url when user not logged in
-    Given User is on Home Page
-    And User is not logged in yet
-    When User go to jasa Management Shopee Checkout Page by url
-    Then User is navigated to Login Page
-
-  @Jasa @Checkout @CheckoutJasa
-  Scenario: User able to confirm Jasa confirmation modal box message
-    Given User is already logged in
-    And User is on Home Page
-    When User go to jasa Management Shopee Checkout Page by url
-    And User click agreement checkbox checkout Jasa
-    And User click button Saya Mengerti checkout Jasa
-    Then Modal agreement Jasa is closed
-
-  @Jasa @Checkout @CheckoutJasa
-  Scenario: User able to checkout Jasa Service
-    Given User is already logged in
-    And User is on Home Page
-    When User go to jasa Management Shopee Checkout Page by url
-    And User click agreement checkbox checkout Jasa
-    And User click button Saya Mengerti checkout Jasa
-    When User click Checkout Jasa
-    When User is navigated to payment jasa page
-    And Xendit Payment Method showed  

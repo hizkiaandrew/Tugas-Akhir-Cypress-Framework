@@ -1,14 +1,14 @@
 Feature: Login Functionality
   Test Login functionalities by access login page and entering credentials
   
-  @Login
+  @Auth @Login
   Scenario: User is able to access Login page by url
     Given User is on Home Page
     And User is not logged in yet
     When User go to Login Page via url
     Then User is navigated to Login Page
   
-  @Login
+  @Auth @Login
   Scenario Outline: User cannot login with wrong email or password
     Given User is on login page
     When User login by entering email field with value "<email>"
@@ -22,7 +22,7 @@ Feature: Login Functionality
       | testemailwrong@email.com    | Hz271100  |
       | testemailresetted@email.com | Hz271115  |
 
-  @Login
+  @Auth @Login
   Scenario Outline: User cannot login with wrong email format
     Given User is on login page
     When User login by entering email field with value "<email>"

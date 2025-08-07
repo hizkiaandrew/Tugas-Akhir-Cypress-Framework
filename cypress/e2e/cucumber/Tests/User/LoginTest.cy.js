@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 import { And, Given, Then, When } from "cypress-cucumber-preprocessor/steps";
-import home from "../../Pages/User/Homepage.cy";
+import home from "../../Pages/User/HomePage.cy";
 import login from "../../Pages/User/LoginPage.cy";
 import { TEST_EMAIL, TEST_PASSWORD } from "../../Utils/variable";
 When("User go to Login Page via url", () => {

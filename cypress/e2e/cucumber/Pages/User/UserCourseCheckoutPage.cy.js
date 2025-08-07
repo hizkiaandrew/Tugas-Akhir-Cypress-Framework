@@ -212,6 +212,14 @@ class UserCourseCheckoutPage {
   verifyUserInShopeePremiumLearningPage() {
     isContainSameLink(LEARNING_PAGE_URL);
   }
+
+  verifyUserInShopeePremiumCheckoutPage() {
+    isContainSameLink(SHOPEE_PREMIUM_CHECKOUT_URL);
+  }
+
+  verifyUserInTiktokPremiumCheckoutPage() {
+    isContainSameLink(TIKTOK_PREMIUM_CHECKOUT_URL);
+  }
 }
 
 const userCourseCheckoutPage = new UserCourseCheckoutPage();

@@ -40,9 +40,8 @@ class HomePage {
 
   clickSemuaJasaNavbar() {
     customWait(500);
-    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    clickElementBySelector("[data-testid='sub-nav-user-Jasa']");
     customWait(500);
-
     clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Semua Jasa']"
     );
@@ -50,10 +49,11 @@ class HomePage {
 
   clickTentangJasaManagementMarketplaceNavbar() {
     customWait(500);
-    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
-    cy.get(
+    clickElementBySelector("[data-testid='sub-nav-user-Jasa']");
+    customWait(500);
+    clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace']"
-    ).realHover();
+    );
     customWait(500);
     clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace'] li:first-child"
@@ -62,11 +62,11 @@ class HomePage {
 
   clickPilihanJasaManagementNavbar() {
     customWait(500);
-    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    clickElementBySelector("[data-testid='sub-nav-user-Jasa']");
     customWait(500);
-    cy.get(
+    clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace']"
-    ).realHover();
+    );
     customWait(500);
     clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Marketplace'] li:nth-child(2)"
@@ -75,11 +75,11 @@ class HomePage {
 
   clickTentangJasaSocialMediaNavbar() {
     customWait(500);
-    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    clickElementBySelector("[data-testid='sub-nav-user-Jasa']");
     customWait(500);
-    cy.get(
+    clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media']"
-    ).realHover();
+    );
     customWait(500);
     clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media'] li:first-child"
@@ -88,11 +88,11 @@ class HomePage {
 
   clickTentangJasaTiktokShopNavbar() {
     customWait(500);
-    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
+    clickElementBySelector("[data-testid='sub-nav-user-Jasa']");
     customWait(500);
-    cy.get(
+    clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media']"
-    ).realHover();
+    );
     customWait(500);
     clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media'] li:nth-child(2)"
@@ -101,11 +101,11 @@ class HomePage {
 
   clickPilihanJasaSocialMediaNavbar() {
     customWait(500);
-    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
-    // customWait(500);
-    cy.get(
+    clickElementBySelector("[data-testid='sub-nav-user-Jasa']");
+    customWait(500);
+    clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media']"
-    ).realHover();
+    );
     customWait(500);
     clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Jasa Management Social Media'] li:nth-child(3)"
@@ -114,8 +114,8 @@ class HomePage {
 
   clickTrainingAndCoachingNavbar() {
     customWait(500);
-    cy.get("[data-testid='sub-nav-user-Jasa']").realHover();
-    // customWait(500);
+    clickElementBySelector("[data-testid='sub-nav-user-Jasa']");
+    customWait(500);
     clickElementBySelector(
       "[data-testid='sub-nav-user-Jasa'] [data-testid='sub-menu-Jasa-Training & Coaching']"
     );

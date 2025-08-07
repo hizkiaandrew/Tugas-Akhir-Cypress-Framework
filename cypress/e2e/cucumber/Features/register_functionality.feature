@@ -19,5 +19,5 @@ Feature: Register Functionality
     And User is navigated to home page to start quick tutorial
     
     Examples:
-      | username            | email                       | phone-number  | password |
-      | [AUTOMATION] Test01 | automation.test             | 08265489      | Hz271100 |
+      | username            | email                       | phone-number     | password |
+      | [AUTOMATION] Test01 | automation.test             | 08355555233      | Hz271100 |
